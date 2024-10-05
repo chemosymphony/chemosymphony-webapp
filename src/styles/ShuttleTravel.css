@@ -7,16 +7,16 @@
     background: url('../assets/images/Space.gif') repeat-x; /* Image repeats horizontally */
     background-size: cover;
     animation: moveBackground 90s linear infinite; /* Adjust speed with 10s */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
   
   /* Spaceship in the center of the screen */
   .spaceship {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the spaceship */
-    width: 200px; /* Adjust size as needed */
-    height: auto;
+    height: 580px;
+    width: auto;
   }
   
   /* Animation for the background to move left */
@@ -28,8 +28,5 @@
       background-position: -10000px 0; /* Large value to make the movement seamless */
     }
   }
-  
-.spaceship {
-    height: 500px;
-    width: 500px;
-}
+
+
