@@ -1,4 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
+import backgroundMusic from "../../assets/music/song.mp3"
 
 const BackgroundMusic = forwardRef((_, ref) => {
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -13,7 +14,7 @@ const BackgroundMusic = forwardRef((_, ref) => {
 
     return (
         <audio ref={audioRef} loop>
-            <source src="/assets/music/song.mp3" type="audio/mpeg" />
+            <source src={backgroundMusic} type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>
     );
