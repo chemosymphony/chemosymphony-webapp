@@ -6,6 +6,7 @@ import Background from './components/atoms/Background';
 import HomePage from './components/pages/HomePage';
 import LoadingPage from './components/pages/LoadingPage';
 import BackgroundMusic from './components/atoms/BackgroundMusic';
+import NewsPage from "./components/pages/NewsPage";
 
 const App: React.FC = () => {
     const musicRef = useRef<{ play: () => void }>(null);
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                     <Routes>
                         <Route path="/" element={<LoadingPage musicRef={musicRef} />} />
                         <Route path="/home" element={<HomePage />} />
+                        <Route path="/news:old" element={<NewsPage />} />
                     </Routes>
                 </AnimatePresence>
         </Router>

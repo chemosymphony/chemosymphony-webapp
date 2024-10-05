@@ -7,7 +7,7 @@ const TextContainer = styled.div`
   font-size: 24px;
   color: #fff;
   text-align: center;
-  max-width: 600px;
+  max-width: 80%;
   margin: 20px;
 `;
 

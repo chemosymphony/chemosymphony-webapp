@@ -6,8 +6,8 @@ const PlayButton = styled(motion.button)`
   font-size: 40px; /* Aumentar o tamanho da fonte */
   cursor: pointer;
   z-index: 10;
-  background-color: #5cb85c; /* Cor de fundo verde */
-  border: 3px solid #4cae4c; /* Cor da borda */
+  background-color: #1e1e1e; /* Cor de fundo verde */
+  border: 3px solid white; /* Cor da borda */
   text-transform: uppercase;
   border-radius: 10px; /* Borda mais arredondada */
   color: white; /* Cor do texto */
@@ -17,14 +17,6 @@ const PlayButton = styled(motion.button)`
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder; /* Peso Black */
   font-style: italic; /* Estilo Itálico */
-
-  &:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-  }
-
-  &:active {
-    transform: scale(0.95); /* Efeito de diminuição ao clicar */
-  }
 `;
 
 export default PlayButton;
