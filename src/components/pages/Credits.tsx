@@ -3,7 +3,7 @@
 import React from 'react';
 import "../../styles/Credits.css";
 
-const Credits = () => {
+const Credits: React.FC = () => {
   return (
     <div className="credits-page">
       <h1 className="credits-title">CREDITS</h1>

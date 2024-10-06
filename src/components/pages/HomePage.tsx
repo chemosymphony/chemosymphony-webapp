@@ -4,10 +4,12 @@ import Card from '../atoms/Card';
 import game from "../../assets/images/game.jpeg";
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import ScrollIndicator from '../atoms/ScrollIndicator';
+import {useNavigate} from "react-router-dom";
 const NextButton = styled(motion.button)`
   margin-bottom: 2em;
   text-transform: uppercase;
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
   font-size: 32px;
   background-color: white;
@@ -19,6 +21,8 @@ const NextButton = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 const Introduction: React.FC = () => {
+    const navigate = useNavigate()
+
     useEffect(() => {
         let ticking = false;
         const handleScroll = () => {
@@ -46,6 +50,18 @@ const Introduction: React.FC = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const start = () => {
+        navigate("/news:past")
+    }
+
+    const handleScrollDown = () => {
+        window.scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className='background-parallax'>
             {/* Parallax layers */}
@@ -56,78 +72,74 @@ const Introduction: React.FC = () => {
             <div className='parallax-layer layer5'></div>
             {/* Your additional content goes here */}
             <div className="content">
+                <ScrollIndicator onClick={handleScrollDown}/>
                 <motion.div
-                    className='content-wrapper'
+                className='content-wrapper'
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                >
+                <Card
+                    title='A great adventure awaits!'
+                    text={
+                        <p className='special-text'>
+                            A spaceship sets off on an exciting mission to explore a distant exoplanet, searching for signs of alien life. The planet is covered in thick ice, but beneath it, a hidden ocean of liquid water awaits. Scientists on board believe strange life forms could be living down there, using chemical energy to survive, just like creatures found deep in Earth's oceans. With curiosity and hope, the crew prepares to drill through the ice and release robots into the mysterious water below. What secrets will they uncover in this icy, alien world? Could life really be out there, waiting to be found?
+                        </p>
+                    }
+                />
+                <motion.p
+                    className='roadmap'
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    transition={{ duration: 1, delay: 1 }}
                 >
-                    <Card
-                        title='A great adventure awaits!'
-                        text={
-                            <p className='special-text'>
-                                A spaceship sets off on an exciting mission to explore a distant exoplanet, searching for signs of life. The planet is covered by thick ice, but beneath it, a hidden ocean of liquid water awaits. Scientists on board believe strange life forms could be living down there, using chemical energy to survive, just like creatures found deep in Earth's oceans. With curiosity and hope, the crew prepares to drill through the ice and release robots into the mysterious water below. What secrets will they uncover in this icy world? Could life really be out there, waiting to be found?
-                            </p>
-                        }
-                    />
-                    <motion.p
-                        className='roadmap'
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: 1 }}
-                    >
-                        Our roadmap
-                    </motion.p>
-
-
-
-
-                    5:57
+                    Our roadmap
+                </motion.p>
+                <motion.div
+                    className='row-wrapper'
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                >
                     <motion.div
-                        className='row-wrapper'
+                        className='element-1'
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: 1.5 }}
+                        transition={{ duration: 1, delay: 2 }}
                     >
-                        <motion.div
-                            className='element-1'
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 2 }}
-                        >
-                            EXPLORE A NEW EXOPLANET!
-                        </motion.div>
-                        <motion.div
-                            className='element-2'
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 2.5 }}
-                        >
-                            KNOW MORE ABOUT CHEMOSYNTHESYS
-                        </motion.div>
-                        <motion.div
-                            className="element-3"
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 3 }}
-                        >
-                            <img src={game} alt="Game Image" className="element-image" />
-                            <p className='text-elements'>Evolutionary game with genetic algorithm</p>
-                        </motion.div>
+                        EXPLORE A NEW EXOPLANET!
                     </motion.div>
-                    <NextButton
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => window.location.href = '/news:past'}
+                    <motion.div
+                        className='element-2'
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: 3.5 }}
+                        transition={{ duration: 1, delay: 2.5 }}
                     >
-                        START ADVENTURE
-                    </NextButton>
+                        KNOW MORE ABOUT CHEMOSYNTHESYS
+                    </motion.div>
+                    <motion.div
+                        className="element-3"
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, delay: 3 }}
+                    >
+                        <img src={game} alt="Game Image" className="element-image" />
+                        <p className='text-elements'>Evolutionary game with genetic algorithm</p>
+                    </motion.div>
                 </motion.div>
-            </div>
+                <NextButton
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={start}
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, delay: 3.5 }}
+                >
+                    START ADVENTURE
+                </NextButton>
+            </motion.div>
         </div>
-    );
+</div>
+);
 };
 export default Introduction;

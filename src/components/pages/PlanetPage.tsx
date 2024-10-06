@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import leftArrowImage from '../../assets/images/arrow.png';
 // @ts-ignore
 import rightArrowImage from '../../assets/images/arrow.png';
+import {useNavigate} from "react-router-dom";
 
 const PageContainer = styled(motion.div)`
   display: flex;
@@ -198,6 +199,7 @@ const textContents = [
 ];
 
 const PlanetPage: React.FC = () => {
+    const navigate = useNavigate()
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [ended, setEnded] = useState(false);
 
@@ -263,7 +265,7 @@ const PlanetPage: React.FC = () => {
                     <NextButton
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        onClick={() => window.location.href = '/transition:arriving'}
+                        onClick={() => navigate('/transition:arriving')}
                     >
                         Next
                     </NextButton>

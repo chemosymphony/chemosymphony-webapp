@@ -25,17 +25,17 @@ const App: React.FC = () => {
             <AnimatePresence mode={"wait"}>
                 <Routes>
                     <Route path="/" element={<LoadingPage musicRef={musicRef} />} />
-                    <Route path="/home" element={<HomePage />} />
-                    <Route path="/news:past" element={<NewsPastPage />} />
-                    <Route path="/news:future" element={<NewsFuturePage />} />
-                    <Route path="/planet" element={<PlanetPage />} />
-                    <Route path="/system" element={<SystemPage />} />
-                    <Route path="/travel" element={<ShuttleTravel />} />
-                    <Route path="/cryobot" element={<CryobotPage />} />
-                    <Route path="/ice" element={<IcePage />} />
-                    <Route path="/transition:arriving" element={<GoingToPlanetPage />} />
-                    <Route path="/credits" element={<Credits />} />
-                    <Route path="/game" element={<GamePage />} />
+                    <Route path="/home" element={<HomePage/>} />
+                    <Route path="/news:past" element={<NewsPastPage/>} />
+                    <Route path="/news:future" element={<NewsFuturePage/>} />
+                    <Route path="/planet" element={<PlanetPage/>} />
+                    <Route path="/system" element={<SystemPage/>} />
+                    <Route path="/travel" element={<ShuttleTravel/>} />
+                    <Route path="/cryobot" element={<CryobotPage/>} />
+                    <Route path="/ice" element={<IcePage/>} />
+                    <Route path="/transition:arriving" element={<GoingToPlanetPage/>} />
+                    <Route path="/credits" element={<Credits/>} />
+                    <Route path="/game" element={<GamePage/>} />
                 </Routes>
             </AnimatePresence>
         </Router>

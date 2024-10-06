@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../../assets/images/chemonews.png';
 // @ts-ignore
-import newsImage from '../../assets/images/news_old.jpeg';
+import newsImage from '../../assets/images/planeta.png';
 // @ts-ignore
 import userImage from '../../assets/images/user.png';
 const PageContainer = styled(motion.div)`

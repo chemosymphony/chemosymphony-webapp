@@ -6,6 +6,7 @@ import leftArrowImage from '../../assets/images/arrow.png';
 // @ts-ignore
 import rightArrowImage from '../../assets/images/arrow.png';
 import cryobot from '../../assets/images/cryobot.jpg';
+import {useNavigate} from "react-router-dom";
 
 const PageContainer = styled(motion.div)`
   display: flex;
@@ -179,6 +180,7 @@ const textContents = [
 ];
 
 const PlanetPage: React.FC = () => {
+    const navigate = useNavigate()
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [ended, setEnded] = useState(false);
 
@@ -242,7 +244,7 @@ const PlanetPage: React.FC = () => {
                 </ContentContainer>
                 <NextButton whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            onClick={() => window.location.href = '/system'}>
+                            onClick={() => navigate('/ice')}>
                     Next
                 </NextButton>
             </PageContainer>

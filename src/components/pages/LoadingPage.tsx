@@ -40,7 +40,7 @@ interface LoadingPageProps {
     musicRef: React.RefObject<{ play: () => void }>;
 }
 
-const CryobotPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
+const LoadingPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
     const [showLogo, setShowLogo] = useState(false);
     const [showButton, setShowButton] = useState(true);
     const [showOverlay, setShowOverlay] = useState(false);
@@ -107,4 +107,4 @@ const CryobotPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
     );
 };
 
-export default CryobotPage;
+export default LoadingPage;
