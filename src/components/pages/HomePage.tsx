@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import "../../styles/HomePage.css";
 import Card from '../atoms/Card';
+import game from "../../assets/images/game.jpeg"
 
 const Introduction: React.FC = () => {
     useEffect(() => {
@@ -66,9 +67,11 @@ const Introduction: React.FC = () => {
                         <div className='element-2'>
                             KNOW MORE ABOUT CHEMOSYNTHESYS
                         </div>
-                        <div className='element-3'>
-                            PLAY A GAME WITH AN EVOLUTIONARY BASED GENETIC AI ALGORITHM
+                        <div className="element-3">
+                            <img src={ game } alt="Game Image" className="element-image" />
+                            <p className='text-elements'>Evolutionary game with genetic algorithm</p>
                         </div>
+
                     </div>
                     <div className='buttom'>
                         <p>aoshd ohas</p>

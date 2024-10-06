@@ -119,20 +119,30 @@
     
 }
 .element-3 {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
     margin: 100px;
     margin-top: 0px;
-
+    overflow: hidden;
+    position: relative;
 }
+
+.element-image {
+    height: 400px;
+    object-fit: cover;
+}
+
 
 .roadmap {
     font-family: "Press Start 2P", system-ui;
     color: white;
     margin-top: 100px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    font-size: 24px
+}
 
+.text-elements {
+    font-family: 'Montserrat', serif;
+    font-size: 24px;
+    font-weight: 650;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
