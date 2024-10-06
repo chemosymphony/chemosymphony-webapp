@@ -53,9 +53,6 @@ const Highlight = styled(motion.span)`
   font-weight: 200;
   font-size: 11px;
   text-align: center;
-  text-decoration: none;
-  border-bottom: 3px solid black;
-  padding-bottom: 2px;
 `;
 
 const Card = styled(motion.div)`
@@ -168,7 +165,7 @@ const cardVariants = {
 
 const textContents = [
     <>
-        TRAPPIST-1e is similar in size to Earth and is located within the habitable zone of its star. It likely has a almost 40-kilometer-thick ice layer, with a possible subsurface ocean beneath, kept warm by heat generated from a metallic core. This internal heating might support environments capable of sustaining life, though the thick ice would block sunlight, posing challenges for photosynthesis.
+        <Highlight>TRAPPIST-1e</Highlight> is similar in size to Earth and is located within the habitable zone of its star. It likely has a almost 40-kilometer-thick ice layer, with a possible subsurface ocean beneath, kept warm by heat generated from a metallic core. This internal heating might support environments capable of sustaining life, though the thick ice would block sunlight, posing challenges for photosynthesis.
     </>,
     <>
         TRAPPIST-1e is also tidally locked, meaning one side always faces its star while the other remains dark. This could create a "terminator line" where temperatures might be milder and potentially more conducive to life.
@@ -181,7 +178,7 @@ const textContents = [
     </p>
 ];
 
-const SystemPage: React.FC = () => {
+const PlanetPage: React.FC = () => {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [ended, setEnded] = useState(false);
 
@@ -257,4 +254,4 @@ const SystemPage: React.FC = () => {
     );
 };
 
-export default SystemPage;
+export default PlanetPage;

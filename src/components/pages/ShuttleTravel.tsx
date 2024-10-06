@@ -77,7 +77,7 @@ const ShuttleTravel = () => {
 
   // Step 5: Handle navigation to another page when the last card is reached
   const handleRedirect = () => {
-    navigate("/another-page"); // Navigate to another page (you can change the route)
+    navigate("/system"); // Navigate to another page (you can change the route)
   };
 
   return (
