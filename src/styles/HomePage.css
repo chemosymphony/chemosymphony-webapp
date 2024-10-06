@@ -1,7 +1,7 @@
 /* Overall parallax container */
 .background-parallax {
     position: relative;
-    height: 200vh; /* Enough height for a long scroll */
+    height: auto; /* Enough height for a long scroll */
     overflow: hidden;
 }
 
@@ -53,18 +53,31 @@
     text-align: center;
     color: #00132f;
     background-color: #00132f;
-    height: 100vh;
+    height: 200vh;
     margin-top: 100vh; /* Content starts after the parallax */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* overflow: scroll; */
+}
+
+/* .content::-webkit-scrollbar {
+    display: none;
+}
+
+.background-parallax::-webkit-scrollbar {
+    display: none;
+}
+
+.parallax-layer::-webkit-scrollbar {
+    display: none;
 }
 
 .special-text {
     font-weight: 500;
     
-}
+} */
 
 .bold-highlight {
     font-family: "Press Start 2P", system-ui;
@@ -91,14 +104,14 @@
 }
 
 .element-1 {
-    width: 600px;
+    width: 400px;
     height: 400px;
     background-color: grey;
     margin: 100px;
     margin-top: 0px;
 }
 .element-2 {
-    width: 600px;
+    width: 400px;
     height: 400px;
     background-color: grey;
     margin: 100px;
@@ -106,7 +119,7 @@
     
 }
 .element-3 {
-    width: 600px;
+    width: 400px;
     height: 400px;
     background-color: grey;
     margin: 100px;
