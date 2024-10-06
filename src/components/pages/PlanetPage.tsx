@@ -128,6 +128,10 @@ const NextButton = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
+const TitlePlanet = styled(motion.h1)`
+  font-family: "Press Start 2P", "Montserrat", serif;
+`;
+
 const pageVariants = {
     initial: {
         opacity: 0,
@@ -163,19 +167,34 @@ const cardVariants = {
     },
 };
 
+const NormalText = styled(motion.div)`
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: "Montserrat", serif;
+  text-align: justify;
+`;
+
 const textContents = [
     <>
-        <Highlight>TRAPPIST-1e</Highlight> is similar in size to Earth and is located within the habitable zone of its star. It likely has a almost 40-kilometer-thick ice layer, with a possible subsurface ocean beneath, kept warm by heat generated from a metallic core. This internal heating might support environments capable of sustaining life, though the thick ice would block sunlight, posing challenges for photosynthesis.
+        <TitlePlanet style={{ fontSize:"15px", textAlign:"start" }}>TRAPPIST-1g - An Icy Exoplanet</TitlePlanet>
+        <NormalText>
+            <br/>
+            <TitlePlanet style={{ fontSize:"11px" }}>Planet Type:</TitlePlanet> Super Earth
+            <br/>
+            <TitlePlanet style={{ fontSize:"11px" }}>Radius:</TitlePlanet> 1.129 times that of Earth
+            <br/>
+            <TitlePlanet style={{ fontSize:"11px" }}>Mass:</TitlePlanet> 1.321 times that of Earth
+            <br/>
+            <TitlePlanet style={{ fontSize:"11px" }}>Discovered in:</TitlePlanet> 2017 via the transit method
+        </NormalText>
     </>,
     <>
-        TRAPPIST-1e is also tidally locked, meaning one side always faces its star while the other remains dark. This could create a "terminator line" where temperatures might be milder and potentially more conducive to life.
+        TRAPPIST-1g is the sixth planet in the TRAPPIST-1 system, located about 40 light-years away in the constellation Aquarius. It orbits its star at a distance of 0.04683 AU (Astronomical Units) with an orbital period of 12.4 Earth days.
     </>,
     <>
-        The probe will release a lander to touch down on a frozen lake. Using thermal technology, the lander will melt through the ice, searching for geothermal activity and potential signs of habitability below the surface.
+        Due to its position and characteristics, TRAPPIST-1g may have a low surface temperature, resulting in a thick layer of ice. Beneath this ice, there could exist a liquid ocean heated by a possible active core of the planet, similar to the icy moons Europa and Enceladus in our solar system.
     </>,
-    <p>
-        As the probe proceeds with its mission, it will release a smaller lander to touch down on one of the frozen lakes. Equipped with thermal technology, the lander will melt through the ice, searching for subsurface oceans and analyzing the water for signs of geothermal activity and life.
-    </p>
 ];
 
 const PlanetPage: React.FC = () => {

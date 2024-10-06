@@ -167,50 +167,50 @@ const cardVariants = {
 
 const textContents = [
     {
-        title: "Importance of Water 1/2",
+        title: "Expanding the Habitable Zone",
         text: (
             <p>
-                <Highlight>Water</Highlight> is essential for life because it enables <Highlight>chemical reactions</Highlight> that sustain <Highlight>living organisms</Highlight>. In liquid form, water allows molecules to interact, forming the <Highlight>building blocks of life like</Highlight> proteins and DNA. Without water, it would be difficult for life as we know it to exist on any planet.
+                Traditionally, the "habitable zone" refers to the region around a star where conditions are just right for liquid water to exist on a planet's surface. However, planets with subsurface oceans beneath thick ice layers expand this concept. Even if a planet is far from its star—making the surface too cold for liquid water—internal heating mechanisms can keep an underground ocean in a liquid state. This means life-supporting conditions might exist in places we previously thought were inhospitable.
             </p>
         ),
     },
     {
-        title: "Importance of Water 2/2",
+        title: " Internal Energy Sources",
         text: (
             <p>
-                Water also <Highlight>stabilizes</Highlight> a planet's climate by absorbing and distributing heat, creating a more stable environment for life. It helps prevent extreme temperature swings and supports the cycles necessary for life to thrive.
+                For a subsurface ocean to remain liquid beneath kilometers of ice, the planet needs internal energy sources. Geothermal heat from radioactive decay or tidal heating caused by gravitational interactions with a star or nearby moons can provide the necessary warmth. These energy sources might also drive hydrothermal vents on the ocean floor, creating rich chemical environments where life could originate and flourish, similar to ecosystems found near Earth's deep-sea vents.
             </p>
         ),
     },
     {
-        title: "Habitable Zone",
+        title: "The Hidden Oceans Beneath Ice",
         text: (
             <p>
-                The habitable zone is the area around a star where conditions <Highlight>allow water to exist in liquid form</Highlight>. If a planet is too close to its star, water will evaporate; too far, and it freezes. The right distance keeps water in liquid form, crucial for supporting life.
+                Beneath the solid ice crust of these distant worlds, liquid water thrives due to internal heating. These hidden oceans allow essential chemical reactions to occur, enabling molecules to interact and potentially form the building blocks of life, such as proteins and nucleic acids. Even without a temperate surface, life as we know it might thrive in these concealed aquatic environments.
             </p>
         ),
     },
     {
-        title: "Atmosphere",
+        title: "Ice Shells and Environmental Stability",
         text: (
             <p>
-                A planet's atmosphere <Highlight>regulates temperature</Highlight>, maintains stability, and can protect from <Highlight>harmful radiation.</Highlight> It also holds essential gases like oxygen or carbon dioxide. The right atmospheric conditions can support life, even if different from Earth's.
+                The thick ice layer acts as a protective barrier and insulator. It shields the underlying ocean from extreme temperature fluctuations, cosmic radiation, and micrometeorite impacts. The ice maintains a stable environment where liquid water persists over geological timescales, creating a consistent habitat that could support life forms adapted to these unique conditions.
             </p>
         ),
     },
     {
-        title: "Geothermal Activity",
+        title: "Life Without Atmospheres",
         text: (
             <p>
-                Geothermal activity <Highlight>provides energy</Highlight> without sunlight, essential for deep ocean ecosystems on Earth. On exoplanets, volcanic or geothermal sources can sustain life by releasing heat and chemicals into the environment, creating habitable conditions even in dark places.
+                While atmospheres are crucial for surface life, subsurface oceans beneath ice layers may not require them. The thick ice serves as a shield against harmful radiation and space debris, reducing the necessity for an atmospheric layer. Although an atmosphere can offer additional benefits, life in these hidden oceans relies more on the protection and insulation provided by the ice. This opens the possibility for unique forms of life to exist without atmospheric support, challenging our preconceived notions of habitable environments.
             </p>
         ),
     },
     {
-        title: "Magnetic Field",
+        title: "Energy Sources for Life",
         text: (
             <p>
-                A strong magnetic field <Highlight>shields</Highlight> a planet from harmful solar radiation, protecting its atmosphere and water. It can also <Highlight>indicate an active core</Highlight>, which supports geothermal activity. Without this protection, life would struggle to survive on the surface.
+                As we explore distant planets, we search for energy sources that life can use. On Earth, life depends largely on energy from sunlight, which enables photosynthesis—allowing plants to produce food and oxygen. Energy sources are essential for supporting life, but perhaps there are other ways life could harness energy in different environments. This mystery inspires us to consider new possibilities.
             </p>
         ),
     },

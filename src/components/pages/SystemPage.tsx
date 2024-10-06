@@ -171,7 +171,7 @@ const textContents = [
         TRAPPIST-1 is a unique solar system located about 40.66 light-years away from Earth, in the constellation Aquarius. It is home to a small, ultracool dwarf star that is much smaller and cooler than our Sun, with only about 8% of the Sun's mass. Despite its dim light and small size, this system has captured the attention of scientists worldwide because it contains seven Earth-sized exoplanets, all packed tightly in orbit around the star. These planets, designated from TRAPPIST-1b to TRAPPIST-1h, orbit their star much more closely than any of the planets in our solar system orbit the Sun.
     </>,
     <>
-        What makes TRAPPIST-1 especially exciting is that three of its planets—TRAPPIST-1e, TRAPPIST-1f, and TRAPPIST-1g—are located in the star's "habitable zone," the region where conditions might be just right for liquid water to exist. Liquid water is one of the key ingredients for life as we know it, which raises the exciting possibility that these planets could harbor life or be possible candidates for future human exploration.
+         What makes TRAPPIST-1 especially exciting is that three of its planets—TRAPPIST-1e, TRAPPIST-1f, and TRAPPIST-1g—are located in the star's region where conditions might be just right for liquid water to exist. Liquid water is one of the key ingredients for life as we know it, which raises the exciting possibility that these planets could harbor life or be possible candidates for future human exploration.
     </>,
 ];
 

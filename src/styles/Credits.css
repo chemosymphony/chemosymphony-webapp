@@ -2,16 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Use a pixel art font */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Press Start 2P', cursive;
-}
 
 .credits-page {
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;

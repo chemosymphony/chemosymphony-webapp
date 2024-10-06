@@ -166,50 +166,13 @@ const cardVariants = {
 
 const textContents = [
     {
-        title: "Importance of Water 1/2",
+        title: "Cryobot",
         text: (
             <p>
-                <Highlight>Water</Highlight> is essential for life because it enables <Highlight>chemical reactions</Highlight> that sustain <Highlight>living organisms</Highlight>. In liquid form, water allows molecules to interact, forming the <Highlight>building blocks of life like</Highlight> proteins and DNA. Without water, it would be difficult for life as we know it to exist on any planet.
-            </p>
-        ),
-    },
-    {
-        title: "Importance of Water 2/2",
-        text: (
-            <p>
-                Water also <Highlight>stabilizes</Highlight> a planet's climate by absorbing and distributing heat, creating a more stable environment for life. It helps prevent extreme temperature swings and supports the cycles necessary for life to thrive.
-            </p>
-        ),
-    },
-    {
-        title: "Habitable Zone",
-        text: (
-            <p>
-                The habitable zone is the area around a star where conditions <Highlight>allow water to exist in liquid form</Highlight>. If a planet is too close to its star, water will evaporate; too far, and it freezes. The right distance keeps water in liquid form, crucial for supporting life.
-            </p>
-        ),
-    },
-    {
-        title: "Atmosphere",
-        text: (
-            <p>
-                A planet's atmosphere <Highlight>regulates temperature</Highlight>, maintains stability, and can protect from <Highlight>harmful radiation.</Highlight> It also holds essential gases like oxygen or carbon dioxide. The right atmospheric conditions can support life, even if different from Earth's.
-            </p>
-        ),
-    },
-    {
-        title: "Geothermal Activity",
-        text: (
-            <p>
-                Geothermal activity <Highlight>provides energy</Highlight> without sunlight, essential for deep ocean ecosystems on Earth. On exoplanets, volcanic or geothermal sources can sustain life by releasing heat and chemicals into the environment, creating habitable conditions even in dark places.
-            </p>
-        ),
-    },
-    {
-        title: "Magnetic Field",
-        text: (
-            <p>
-                A strong magnetic field <Highlight>shields</Highlight> a planet from harmful solar radiation, protecting its atmosphere and water. It can also <Highlight>indicate an active core</Highlight>, which supports geothermal activity. Without this protection, life would struggle to survive on the surface.
+                You will launch a specialized probe to the icy surface of TRAPPIST-1g. The primary objective is to investigate the habitability beneath the ice layer. Using advanced thermal technology, the probe—or cryobot—will melt through kilometers of ice to access the subsurface ocean.
+                <br/>
+                <br/>
+                After reaching the ocean, it will deploy autonomous micro-swimming robots to explore the aquatic environment beyond the reach of the cryobot. These micro-swimmers will search for signs of geothermal activity, essential chemical compounds, and potential life forms. This mission will expand our understanding of ocean worlds and the potential existence of life beyond Earth
             </p>
         ),
     },

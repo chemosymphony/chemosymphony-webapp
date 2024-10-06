@@ -99,6 +99,7 @@ const CommentText = styled.div`
   flex: 1;
   font-size: 13px;
   font-family: "Montserrat", serif;
+  text-align: justify;
 `;
 const Star = styled.span`
   color: gold;
@@ -121,6 +122,11 @@ const NextButton = styled(motion.button)`
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
+
+const GameText = styled(motion.p)`
+  font-family: "Press Start 2P", "Montserrat", serif;
+`;
+
 const NewsFuturePage: React.FC = () => {
     const navigate = useNavigate();
     const [isExiting, setIsExiting] = useState(false);
@@ -158,7 +164,7 @@ const NewsFuturePage: React.FC = () => {
                                 animate={{ x: 0 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Trappist Clipper Arrives to Investigate Life on TRAPPIST-1e
+                                <GameText style={{ fontSize: "24px" }}>Voyage to the Frozen World: The Trappist Clipper's Epic Journey to TRAPPIST-1g</GameText>
                             </Headline>
                             <Date
                                 initial={{ opacity: 0 }}
@@ -172,22 +178,19 @@ const NewsFuturePage: React.FC = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 2 }}
                             >
-                                After an epic journey spanning 300 years, the *Trappist Clipper* has finally arrived at TRAPPIST-1e, a distant exoplanet located 40 light-years from Earth. This mission marks a monumental achievement in interstellar exploration, powered by the latest advancements in *laser propulsion* and *MagSail* technology, pushing the boundaries of human ingenuity.
+                                After a breathtaking journey spanning 300 years, the Trappist Clipper has finally reached the mysterious world of TRAPPIST-1g, an exoplanet located 40.7 light-years away from Earth.
                                 <br/>
                                 <br/>
-                                The *Trappist Clipper* embarked on its voyage in the early 2100s, using a highly efficient *laser propulsion system* that accelerated the spacecraft to *0.2c*—20% of the speed of light. For the first 20 light-years of its journey, the probe coasted at this remarkable velocity, covering the vast distance faster than any spacecraft ever before. The laser sail was driven by Earth-based and space-based laser arrays, providing the initial thrust required to push the Clipper to interstellar speeds.
+                                Launched in the early 2100s, the Clipper raced through interstellar space, journeying farther than any spacecraft before. Halfway through its journey, the spacecraft began to slow down, carefully adjusting its course toward its ultimate goal.
                                 <br/>
                                 <br/>
-                                As the spacecraft neared the halfway point of its journey, the mission shifted into the next phase: *MagSail deceleration. The MagSail, a superconducting loop that generates a magnetic field, was deployed to interact with the sparse particles in the interstellar medium. This magnetic field created drag, gradually slowing the probe from **0.2c* to near-zero velocity over the remaining 20 light-years. This innovative technology allowed the spacecraft to decelerate without the need for fuel, ensuring it could safely approach TRAPPIST-1e and begin its mission.
+                                Awaiting the Clipper was TRAPPIST-1g, a planet covered in ice several kilometers deep. Beneath this frozen surface lies a vast ocean, a hidden world where life might exist in the darkness. Similar to the unique ecosystems found near Earth's deep-sea hydrothermal vents, these alien waters might harbor organisms that could change our understanding of life.
                                 <br/>
                                 <br/>
-                                TRAPPIST-1e, an Earth-sized exoplanet within the habitable zone of its star, has long been suspected of harboring liquid water beneath its icy surface. Scientists hope to uncover evidence of microbial life or complex ecosystems, similar to the hydrothermal vent communities found in Earth’s oceans. The Trappist Clipper, equipped with next-generation quantum sensors and autonomous probes, will scan the surface, ice layers, and potential subsurface oceans for signs of habitability and life.
+                                Equipped with advanced sensors and autonomous probes, the Trappist Clipper is ready to break through the icy shell. Its mission: to explore the ice layers, dive into the deep ocean, and search for signs of life—whether microscopic or more complex. Every discovery will bridge the vast distance back to Earth.
                                 <br/>
                                 <br/>
-                                This historic arrival not only symbolizes humanity's first steps toward exploring other star systems, but also answers the age-old question: what lies beyond our solar system? Over the coming months, the spacecraft will relay its findings back to Earth, where scientists eagerly await the first glimpse of TRAPPIST-1e’s secrets.
-                                <br/>
-                                <br/>
-                                The next chapter in our quest to discover life in the universe begins today.
+                                This bold expedition is more than a scientific mission; it's a story of exploration, courage, and the enduring human spirit. As the Clipper explores TRAPPIST-1g, people around the world hope to answer one of our oldest questions: Are we alone in the universe?
                             </Text>
                             <Image
                                 src={newsImage}
@@ -203,19 +206,39 @@ const NewsFuturePage: React.FC = () => {
                             transition={{ duration: 1, delay: 1.5 }}
                         >
                             <Headline>
-                                Comments
+                                <GameText style={{ fontSize:"15px" }}>Comments</GameText>
                             </Headline>
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    Great article! Very informative.
+                                The Trappist Clipper was propelled by an innovative laser sail system. Massive laser arrays on Earth and in orbit emitted powerful laser beams directed at a large, reflective sail attached to the spacecraft. This light pressure provided continuous acceleration, allowing the Clipper to reach speeds of up to 0.2c (20% the speed of light) over a relatively short period.
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
+                            <br/>
+                            <br/>
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    Can't wait to see what they discover!
+                                Despite traveling at such high speeds, the journey to TRAPPIST-1g took 300 years due to the immense distance of 40.7 light-years. For the first half of the journey, the spacecraft maintained its top speed. The second half involved gradual deceleration to ensure a safe arrival at the destination.
+                                </CommentText>
+                                <Star>★</Star>
+                            </Comment>
+                            <br/>
+                            <br/>
+                            <Comment>
+                                <UserImage src={userImage} alt="User" />
+                                <CommentText>
+                                To decelerate without conventional fuel, the Clipper deployed a Magnetic Sail or MagSail. This consisted of a large superconducting loop generating a magnetic field. As the spacecraft moved through the interstellar medium, the magnetic field interacted with charged particles, creating a drag force that gradually slowed the spacecraft over the remaining distance.
+                                </CommentText>
+                                <Star>★</Star>
+                            </Comment>
+                            <br/>
+                            <br/>
+                            <Comment>
+                                <UserImage src={userImage} alt="User" />
+                                <CommentText>
+                                The Clipper uses quantum entanglement for instant communication across vast distances. Pairs of entangled particles were prepared before the mission; one particle remained on Earth while its entangled partner traveled with the spacecraft. Changes observed in one particle are reflected in its entangled partner, allowing for instantaneous data transmission back to Earth.
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>

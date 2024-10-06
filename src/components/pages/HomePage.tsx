@@ -66,7 +66,7 @@ const Introduction: React.FC = () => {
                         title='A great adventure awaits!'
                         text={
                             <p className='special-text'>
-                                A spaceship sets off on an exciting mission to explore a distant exoplanet, searching for signs of alien life. The planet is covered in thick ice, but beneath it, a hidden ocean of liquid water awaits. Scientists on board believe strange life forms could be living down there, using chemical energy to survive, just like creatures found deep in Earth's oceans. With curiosity and hope, the crew prepares to drill through the ice and release robots into the mysterious water below. What secrets will they uncover in this icy, alien world? Could life really be out there, waiting to be found?
+                                A spaceship sets off on an exciting mission to explore a distant exoplanet, searching for signs of life. The planet is covered by thick ice, but beneath it, a hidden ocean of liquid water awaits. Scientists on board believe strange life forms could be living down there, using chemical energy to survive, just like creatures found deep in Earth's oceans. With curiosity and hope, the crew prepares to drill through the ice and release robots into the mysterious water below. What secrets will they uncover in this icy world? Could life really be out there, waiting to be found?
                             </p>
                         }
                     />
