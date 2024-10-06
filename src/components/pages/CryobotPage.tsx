@@ -224,22 +224,6 @@ const PlanetPage: React.FC = () => {
                     </Card>
                     <TextCard variants={cardVariants}>
                         {textContents[currentTextIndex].text}
-                        <ArrowContainer>
-                            <ArrowButton
-                                onClick={handlePrev}
-                                whileTap={{ scale: 0.8 }}
-                                disabled={currentTextIndex === 0}
-                            >
-                                <LeftArrowImage src={leftArrowImage} alt="Left Arrow" />
-                            </ArrowButton>
-                            <ArrowButton
-                                onClick={handleNext}
-                                whileTap={{ scale: 0.8 }}
-                                disabled={currentTextIndex === textContents.length - 1}
-                            >
-                                <ArrowImage src={rightArrowImage} alt="Right Arrow" />
-                            </ArrowButton>
-                        </ArrowContainer>
                     </TextCard>
                 </ContentContainer>
                 <NextButton whileHover={{ scale: 1.1 }}
