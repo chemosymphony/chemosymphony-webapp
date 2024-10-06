@@ -1,0 +1,146 @@
+/* src/CreditsPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Use a pixel art font */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.credits-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.credits-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-family: 'Press Start 2P', cursive;
+    animation: slideUp 1s ease-out forwards; /* Title slide-up animation */
+}
+
+/* Sliding animation for title */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.credits-content {
+  width: 80%;
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeInContent 2.5s ease-in 1s forwards; /* Fade-in content */
+}
+
+/* Fade-in effect for content */
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.credits-section {
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInSection 1.2s ease-in forwards;
+}
+
+.credits-section:nth-child(1) {
+  animation-delay: 1.5s; /* Delay for the first section */
+}
+
+.credits-section:nth-child(2) {
+  animation-delay: 2s; /* Delay for the second section */
+}
+
+.credits-section:nth-child(3) {
+  animation-delay: 2.5s; /* Delay for the third section */
+}
+
+/* Fade-in for individual sections */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.credits-section h2 {
+  font-size: 24px;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.credits-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.credits-section ul li {
+  font-size: 18px;
+  line-height: 1.8;
+  text-shadow: 1px 1px 0px #000;
+}
+
+/* Enhanced effect for the "THANK YOU ALL" message */
+.credits-page:after {
+    content: 'THANK YOU ALL! THIS WAS OUR NASA SPACE APPS PROJECT!';
+    display: block;
+    margin-top: 50px;
+    font-size: 11px;
+    color: #3381f7;
+    font-family: 'Press Start 2P', cursive;
+    animation: smoothBlink 4s infinite ease-in-out, gentlePulse 3.5s infinite ease-in-out, float 6s infinite ease-in-out;
+}
+
+/* Smooth blinking effect */
+@keyframes smoothBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Subtle pulsing effect */
+@keyframes gentlePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08); /* Slightly stronger pulse */
+    }
+}
+
+/* Floating effect to give it a "hovering" feel */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Gentle floating motion */
+    }
+}
