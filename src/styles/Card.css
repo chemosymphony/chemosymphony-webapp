@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    text-align: justify;
   }
   
   .card-text {
@@ -52,8 +53,6 @@
     font-weight: 200;
     text-align: center;
     text-decoration: none; /* Remove the default underline */
-    border-bottom: 3px solid black; /* Create a sharp, blocky underline */
-    padding-bottom: 2px; /* Adjust spacing between the text and underline */
   }
   
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');

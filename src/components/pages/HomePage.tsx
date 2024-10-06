@@ -93,7 +93,7 @@ const Introduction: React.FC = () => {
                     <NextButton
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        onClick={() => window.location.href = '/transition:arriving'}
+                        onClick={() => window.location.href = '/shuttle-travel'}
                     >
                         START ADVENTURE
                     </NextButton>
