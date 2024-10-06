@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import PlayButton from '../atoms/PlayButton';
 import Background from '../atoms/Background';
 import LogoImage from '../atoms/Logo';
-import AnimatedText from '../atoms/AnimatedText';
 import styled from 'styled-components';
 import logo from '../../assets/images/chemoshymphony.png';
 
@@ -30,6 +29,7 @@ const Overlay = styled(motion.div)`
 
 const TextContainer = styled(motion.div)`
   position: absolute;
+  font-family: "Press Start 2P", "Montserrat", serif;
   top: 20%; /* 20% from the top */
   left: 20%; /* Adjust this as needed */
   z-index: 30; /* Ensure text is above the overlay */
@@ -40,10 +40,9 @@ interface LoadingPageProps {
     musicRef: React.RefObject<{ play: () => void }>;
 }
 
-const LoadingPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
+const CryobotPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
     const [showLogo, setShowLogo] = useState(false);
     const [showButton, setShowButton] = useState(true);
-    const [showText, setShowText] = useState(false);
     const [showOverlay, setShowOverlay] = useState(false);
     const navigate = useNavigate();
 
@@ -52,15 +51,15 @@ const LoadingPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
             musicRef.current.play();
         }
         setShowButton(false);
-        setTimeout(() => setShowLogo(true), 1000); // Delay to show logo after button fade out
+        setTimeout(() => setShowLogo(true), 1000);
     };
 
-    const handleTextComplete = () => {
-        setShowText(false);
+    const handleAnimationComplete = () => {
+        setShowLogo(false);
         setShowOverlay(true);
         setTimeout(() => {
-            navigate('/home');
-        }, 2000);
+            navigate("/home");
+        }, 2000); // Adjust the delay as needed
     };
 
     return (
@@ -90,24 +89,8 @@ const LoadingPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 1, delay: 1 }} // Delay to fade out logo
-                            onAnimationComplete={() => {
-                                setShowLogo(false);
-                                // Delay before showing text
-                                setTimeout(() => setShowText(true), 3000); // Adjust the delay as needed
-                            }}
+                            onAnimationComplete={handleAnimationComplete}
                         />
-                    )}
-                </AnimatePresence>
-                <AnimatePresence>
-                    {showText && (
-                        <TextContainer
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 1 }} // Fade in text
-                        >
-                            <AnimatedText onComplete={handleTextComplete} />
-                        </TextContainer>
                     )}
                 </AnimatePresence>
                 <AnimatePresence>
@@ -124,4 +107,4 @@ const LoadingPage: React.FC<LoadingPageProps> = ({ musicRef }) => {
     );
 };
 
-export default LoadingPage;
+export default CryobotPage;

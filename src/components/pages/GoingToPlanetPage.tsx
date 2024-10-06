@@ -67,7 +67,7 @@ const TransitionPage: React.FC = () => {
         if (showBlackout) {
             // Redireciona após o Blackout (2 segundos depois da animação)
             const redirectTimer = setTimeout(() => {
-                navigate('/ice'); // Altere para a página desejada
+                navigate('/cylinder'); // Altere para a página desejada
             }, 2000); // Sincronizado com a duração do Blackout
 
             return () => clearTimeout(redirectTimer); // Limpa o timer

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 const BackgroundContainer = styled.div`
-  background-image: url('/bg.png');
+  background-image: url('/Space.gif');
   background-size: cover;
   background-position: center;
   width: 100vw;
