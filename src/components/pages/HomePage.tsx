@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import "../../styles/HomePage.css";
 import Card from '../atoms/Card';
-import game from "../../assets/images/game.jpeg";
+import game from "../../assets/images/game.gif";
+import ice from "../../assets/images/ice.gif";
+import exoplanet from "../../assets/images/exoplanet.gif";
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import ScrollIndicator from '../atoms/ScrollIndicator';
@@ -107,7 +109,9 @@ const Introduction: React.FC = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: 2 }}
                     >
-                        EXPLORE A NEW EXOPLANET!
+                        <img src={exoplanet} alt="Exoplanet Image" className="element-image" />
+                        <p className='text-elements'>Go on a space mission based on the real exoplanet TRAPPIST-1 g!
+                        </p>
                     </motion.div>
                     <motion.div
                         className='element-2'
@@ -115,7 +119,8 @@ const Introduction: React.FC = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: 2.5 }}
                     >
-                        KNOW MORE ABOUT CHEMOSYNTHESYS
+                        <img src={ice} alt="Game Image" className="element-image" />
+                        <p className='text-elements'>Learn about chemosynthesis, a whole new energy source for life!</p>
                     </motion.div>
                     <motion.div
                         className="element-3"
@@ -124,7 +129,7 @@ const Introduction: React.FC = () => {
                         transition={{ duration: 1, delay: 3 }}
                     >
                         <img src={game} alt="Game Image" className="element-image" />
-                        <p className='text-elements'>Evolutionary game with genetic algorithm</p>
+                        <p className='text-elements'>Watch evolution in motion with the help of genetic algorithms!</p>
                     </motion.div>
                 </motion.div>
                 <NextButton
