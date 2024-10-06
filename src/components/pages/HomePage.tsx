@@ -2,6 +2,23 @@ import React, { useEffect } from 'react';
 import "../../styles/HomePage.css";
 import Card from '../atoms/Card';
 import game from "../../assets/images/game.jpeg"
+import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const NextButton = styled(motion.button)`
+  margin-bootom: 20px;
+  text-transform: uppercase;
+  font-family: "Press Start 2P";
+  padding: 30px 50px;
+  font-size: 32px;
+  background-color: white;
+  color: #0e0e0e;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
 
 const Introduction: React.FC = () => {
     useEffect(() => {
@@ -73,9 +90,13 @@ const Introduction: React.FC = () => {
                         </div>
 
                     </div>
-                    <div className='buttom'>
-                        <p>aoshd ohas</p>
-                    </div>
+                    <NextButton
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => window.location.href = '/transition:arriving'}
+                    >
+                        START ADVENTURE
+                    </NextButton>
                 </div>
             </div>
         </div>

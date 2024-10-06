@@ -16,7 +16,7 @@
   }
   
   .card-text {
-    font-size: 30px; /* Larger blocky text */
+    font-size: 32px; /* Larger blocky text */
     font-family: "Montserrat", sans-serif;
     color: black; /* Darker text for retro feel */
     line-height: 1.2; /* Tighter line spacing */
@@ -35,7 +35,7 @@
   }
   
   /* Pixelated font */
-
+  
   
   .card-wrapper {
     color: white;
@@ -43,16 +43,18 @@
   }
   
 
-.bold-highlight {
+  .bold-highlight {
     font-family: "Press Start 2P", system-ui;
     color: black; 
     font-size: 24px;
-    color: black; 
     line-height: 1.2; 
     margin: 0;
     font-weight: 200;
     text-align: center;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
+    text-decoration: none; /* Remove the default underline */
+    border-bottom: 3px solid black; /* Create a sharp, blocky underline */
+    padding-bottom: 2px; /* Adjust spacing between the text and underline */
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');

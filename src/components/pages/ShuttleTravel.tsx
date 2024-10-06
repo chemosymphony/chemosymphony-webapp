@@ -97,7 +97,7 @@ const ShuttleTravel = () => {
             <button onClick={handlePrevious}>Previous</button>
           )}
 
-          {/* Step 8: Conditionally render the "Next" button or the "Redirect" button */}
+          {/* Step 8: Conditionally render the "Next" button or the "Redirect" button */} 
           {currentIndex < cards.length - 1 ? (
             <button onClick={handleNext}>Next</button>
           ) : (
