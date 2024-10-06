@@ -62,23 +62,6 @@
     /* overflow: scroll; */
 }
 
-/* .content::-webkit-scrollbar {
-    display: none;
-}
-
-.background-parallax::-webkit-scrollbar {
-    display: none;
-}
-
-.parallax-layer::-webkit-scrollbar {
-    display: none;
-}
-
-.special-text {
-    font-weight: 500;
-    
-} */
-
 .bold-highlight {
     font-family: "Press Start 2P", system-ui;
     color: black; 
@@ -136,7 +119,7 @@
     color: white;
     margin-top: 100px;
     margin-bottom: 0px;
-    font-size: 24px
+    font-size: 30px
 }
 
 .text-elements {
