@@ -22,7 +22,7 @@ const Header = styled(motion.header)`
   justify-content: center;
   width: 100%;
   padding: 20px;
-  background-color: #c23616;
+  background-color: #0e0e0e;
   color: white;
   height: 150px;
 `;
@@ -113,7 +113,7 @@ const NextButton = styled(motion.button)`
   font-family: "Montserrat", serif;
   padding: 30px 50px;
   font-size: 32px;
-  background-color: #c23616;
+  background-color: #0e0e0e;
   color: white;
   font-weight: bolder;
   border: none;
