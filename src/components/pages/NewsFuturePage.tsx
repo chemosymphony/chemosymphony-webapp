@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../../assets/images/chemoshymphony.png';
+import logo from '../../assets/images/chemonews.png';
 // @ts-ignore
 import newsImage from '../../assets/images/news_old.jpeg';
 // @ts-ignore
@@ -19,14 +19,15 @@ const PageContainer = styled(motion.div)`
 const Header = styled(motion.header)`
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   width: 100%;
   padding: 20px;
   background-color: #c23616;
   color: white;
+  height: 150px;
 `;
 const Logo = styled(motion.img)`
-  width: 100px;
+  width: auto;
   height: 100px;
   margin-right: 20px;
 `;
@@ -38,6 +39,8 @@ const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100vh;
+  max-height: calc(100vh - 200px);
   max-width: 1200px;
   margin-top: 20px;
 `;
@@ -143,13 +146,6 @@ const NewsFuturePage: React.FC = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1 }}
                         />
-                        <Title
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.5 }}
-                        >
-                            Space Apps News
-                        </Title>
                     </Header>
                     <ContentContainer>
                         <Content
@@ -162,25 +158,36 @@ const NewsFuturePage: React.FC = () => {
                                 animate={{ x: 0 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Europa Clipper Launches Today, Eyes on the Icy Moon's Hidden Ocean
+                                Trappist Clipper Arrives to Investigate Life on TRAPPIST-1e
                             </Headline>
                             <Date
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 1.5 }}
                             >
-                                October 10th, 2024
+                                October 10th, 2424
                             </Date>
                             <Text
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 2 }}
                             >
-                                <p>NASA's Europa Clipper is embarking on a journey to explore Jupiter's moon, Europa. The mission aims to investigate the possibility of life beneath Europa's icy crust, where a vast ocean may lie.</p>
+                                After an epic journey spanning 300 years, the *Trappist Clipper* has finally arrived at TRAPPIST-1e, a distant exoplanet located 40 light-years from Earth. This mission marks a monumental achievement in interstellar exploration, powered by the latest advancements in *laser propulsion* and *MagSail* technology, pushing the boundaries of human ingenuity.
                                 <br/>
-                                <p>The spacecraft will take five and a half years to reach Europa and, while not specifically searching for life, scientists expect the Clipper to reveal detailed data about Europa's surface and potential plumes of water, offering insights into the moon's habitability.</p>
                                 <br/>
-                                <p>This mission marks a major step toward answering one of humanity's most profound questions: could life exist elsewhere in our solar system?</p>
+                                The *Trappist Clipper* embarked on its voyage in the early 2100s, using a highly efficient *laser propulsion system* that accelerated the spacecraft to *0.2c*—20% of the speed of light. For the first 20 light-years of its journey, the probe coasted at this remarkable velocity, covering the vast distance faster than any spacecraft ever before. The laser sail was driven by Earth-based and space-based laser arrays, providing the initial thrust required to push the Clipper to interstellar speeds.
+                                <br/>
+                                <br/>
+                                As the spacecraft neared the halfway point of its journey, the mission shifted into the next phase: *MagSail deceleration. The MagSail, a superconducting loop that generates a magnetic field, was deployed to interact with the sparse particles in the interstellar medium. This magnetic field created drag, gradually slowing the probe from **0.2c* to near-zero velocity over the remaining 20 light-years. This innovative technology allowed the spacecraft to decelerate without the need for fuel, ensuring it could safely approach TRAPPIST-1e and begin its mission.
+                                <br/>
+                                <br/>
+                                TRAPPIST-1e, an Earth-sized exoplanet within the habitable zone of its star, has long been suspected of harboring liquid water beneath its icy surface. Scientists hope to uncover evidence of microbial life or complex ecosystems, similar to the hydrothermal vent communities found in Earth’s oceans. The Trappist Clipper, equipped with next-generation quantum sensors and autonomous probes, will scan the surface, ice layers, and potential subsurface oceans for signs of habitability and life.
+                                <br/>
+                                <br/>
+                                This historic arrival not only symbolizes humanity's first steps toward exploring other star systems, but also answers the age-old question: what lies beyond our solar system? Over the coming months, the spacecraft will relay its findings back to Earth, where scientists eagerly await the first glimpse of TRAPPIST-1e’s secrets.
+                                <br/>
+                                <br/>
+                                The next chapter in our quest to discover life in the universe begins today.
                             </Text>
                             <Image
                                 src={newsImage}
@@ -201,14 +208,14 @@ const NewsFuturePage: React.FC = () => {
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    <p>Great article! Very informative.</p>
+                                    Great article! Very informative.
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    <p>Can't wait to see what they discover!</p>
+                                    Can't wait to see what they discover!
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
@@ -228,7 +235,7 @@ const NewsFuturePage: React.FC = () => {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    onAnimationComplete={() => navigate('/planet')}
+                    onAnimationComplete={() => navigate('/travel')}
                 />
             )}
         </AnimatePresence>

@@ -26,6 +26,10 @@ const TextCard = styled(motion.div)`
   text-align: justify;
 `;
 
+const GameText = styled(motion.p)`
+  font-family: "Press Start 2P", "Montserrat", serif;
+`;
+
 const Card = styled(motion.div)`
   flex: 2;
   background: white;
@@ -103,12 +107,11 @@ const SystemPage: React.FC = () => {
                 animate="animate"
                 exit="exit"
             >
+                <h1>aa</h1>
                 <TextCard variants={cardVariants}>
-                    <h1>Welcome to the TRAPPIST-1 Solar System!</h1>
-                    <p>
-                        TRAPPIST-1 is a unique solar system located about 40 light-years away from Earth, in the constellation Aquarius. It is home to a small, ultracool dwarf star that is much smaller and cooler than our Sun, with only about 8% of the Sun's mass. Despite its dim light and small size, this system has captured the attention of scientists worldwide because it contains seven Earth-sized exoplanets, all packed tightly in orbit around the star. These planets, designated from TRAPPIST-1b to TRAPPIST-1h, orbit their star much more closely than any of the planets in our solar system orbit the Sun.
+                        <GameText>TRAPPIST-1</GameText> is a unique solar system located about 40 light-years away from Earth, in the constellation Aquarius. It is home to a small, ultracool dwarf star that is much smaller and cooler than our Sun, with only about 8% of the Sun's mass. Despite its dim light and small size, this system has captured the attention of scientists worldwide because it contains seven Earth-sized exoplanets, all packed tightly in orbit around the star. These planets, designated from TRAPPIST-1b to TRAPPIST-1h, orbit their star much more closely than any of the planets in our solar system orbit the Sun.
 
-                    </p>
+
                 </TextCard>
                 <Card variants={cardVariants}>
                     <Iframe src="https://eyes.nasa.gov/apps/exo/#/system/TRAPPIST-1" />

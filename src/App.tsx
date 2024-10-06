@@ -13,6 +13,7 @@ import SystemPage from "./components/pages/SystemPage";
 import GoingToPlanetPage from "./components/pages/GoingToPlanetPage";
 import GamePage from "./components/pages/GamePage";
 import ShuttleTravel from './components/pages/ShuttleTravel';
+import IcePage from "./components/pages/IcePage";
 const App: React.FC = () => {
     const musicRef = useRef<{ play: () => void }>(null);
     return (
@@ -28,6 +29,8 @@ const App: React.FC = () => {
                     <Route path="/news:future" element={<NewsFuturePage />} />
                     <Route path="/planet" element={<PlanetPage />} />
                     <Route path="/system" element={<SystemPage />} />
+                    <Route path="/travel" element={<ShuttleTravel />} />
+                    <Route path="/ice" element={<IcePage />} />
                     <Route path="/transition:arriving" element={<GoingToPlanetPage />} />
                     <Route path="/game" element={<GamePage />} />
                 </Routes>

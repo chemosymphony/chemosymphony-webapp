@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../../assets/images/chemoshymphony.png';
+import logo from '../../assets/images/chemonews.png';
 // @ts-ignore
 import newsImage from '../../assets/images/news_old.jpeg';
 // @ts-ignore
@@ -19,14 +19,15 @@ const PageContainer = styled(motion.div)`
 const Header = styled(motion.header)`
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   width: 100%;
   padding: 20px;
   background-color: #c23616;
   color: white;
+  height: 150px;
 `;
 const Logo = styled(motion.img)`
-  width: 100px;
+  width: auto;
   height: 100px;
   margin-right: 20px;
 `;
@@ -40,6 +41,8 @@ const ContentContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   margin-top: 20px;
+  height: 100vh;
+  max-height: calc(100vh - 200px);
 `;
 const Content = styled(motion.div)`
   max-width: 800px;
@@ -143,13 +146,6 @@ const NewsPastPage: React.FC = () => {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1 }}
                         />
-                        <Title
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.5 }}
-                        >
-                            Space Apps News
-                        </Title>
                     </Header>
                     <ContentContainer>
                         <Content
@@ -176,11 +172,13 @@ const NewsPastPage: React.FC = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 2 }}
                             >
-                                <p>NASA's Europa Clipper is embarking on a journey to explore Jupiter's moon, Europa. The mission aims to investigate the possibility of life beneath Europa's icy crust, where a vast ocean may lie.</p>
+                                NASA's Europa Clipper is embarking on a journey to explore Jupiter's moon, Europa. The mission aims to investigate the possibility of life beneath Europa's icy crust, where a vast ocean may lie.
                                 <br/>
-                                <p>The spacecraft will take five and a half years to reach Europa and, while not specifically searching for life, scientists expect the Clipper to reveal detailed data about Europa's surface and potential plumes of water, offering insights into the moon's habitability.</p>
                                 <br/>
-                                <p>This mission marks a major step toward answering one of humanity's most profound questions: could life exist elsewhere in our solar system?</p>
+                                The spacecraft will take five and a half years to reach Europa and, while not specifically searching for life, scientists expect the Clipper to reveal detailed data about Europa's surface and potential plumes of water, offering insights into the moon's habitability.
+                                <br/>
+                                <br/>
+                                This mission marks a major step toward answering one of humanity's most profound questions: could life exist elsewhere in our solar system?
                             </Text>
                             <Image
                                 src={newsImage}
@@ -201,14 +199,14 @@ const NewsPastPage: React.FC = () => {
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    <p>Great article! Very informative.</p>
+                                    Great article! Very informative.
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
                             <Comment>
                                 <UserImage src={userImage} alt="User" />
                                 <CommentText>
-                                    <p>Can't wait to see what they discover!</p>
+                                    Can't wait to see what they discover!
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
