@@ -81,18 +81,16 @@
 }
 
 .element-1 {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
     margin: 100px;
     margin-top: 0px;
+    overflow: hidden;
+    position: relative; 
 }
 .element-2 {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
     margin: 100px;
     margin-top: 0px;
+    overflow: hidden;
+    position: relative;
     
 }
 .element-3 {
@@ -117,9 +115,11 @@
 }
 
 .text-elements {
-    font-family: 'Montserrat', serif;
-    font-size: 24px;
+    font-family: "Press Start 2P";
+    font-size: 14px;
+    line-height: 29px;
     font-weight: 650;
+    margin: 0px;
 }
 
 
