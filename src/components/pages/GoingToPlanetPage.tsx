@@ -7,7 +7,7 @@ import spaceGif from '../../assets/images/Space.gif';
 // @ts-ignore
 import satelliteGif from '../../assets/images/Europa_flipper.gif';
 // @ts-ignore
-import planetImage from '../../assets/images/planet.png';
+import planetImage from '../../assets/images/trappistg.png';
 
 const PageContainer = styled.div`
   display: flex;
