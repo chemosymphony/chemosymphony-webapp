@@ -1,26 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.506444f6.css",
-    "main.js": "/static/js/main.7c2790c5.js",
-    "static/js/453.1e06e1e2.chunk.js": "/static/js/453.1e06e1e2.chunk.js",
+    "main.css": "/static/css/main.d28ccd4b.css",
+    "main.js": "/static/js/main.675f4906.js",
+    "static/js/453.aba8c7b8.chunk.js": "/static/js/453.aba8c7b8.chunk.js",
     "static/media/song.mp3": "/static/media/song.8fce8e17fe2fa9df5e0a.mp3",
     "static/media/user.png": "/static/media/user.b27bac411ca721d2e99f.png",
     "static/media/news_old.jpeg": "/static/media/news_old.b07dc5860f31c39f447e.jpeg",
+    "static/media/game.jpeg": "/static/media/game.22df2459dfbe09f771ef.jpeg",
+    "static/media/chemosynthesis.jpg": "/static/media/chemosynthesis.2905cf6454824af57ea9.jpg",
+    "static/media/image1.png": "/static/media/image1.edcf6d354e3d9b1e59ea.png",
+    "static/media/image4.gif": "/static/media/image4.72ef454b70423b9d7449.gif",
+    "static/media/photosynthesis.png": "/static/media/photosynthesis.60f61bdb1f5fe435891b.png",
+    "static/media/hydrothermal.jpg": "/static/media/hydrothermal.6c817dfbb00e5bb3745a.jpg",
+    "static/media/ice_bg2.png": "/static/media/ice_bg2.284e586b324ee29fe073.png",
+    "static/media/ice_bg1.png": "/static/media/ice_bg1.5305ea0357d2843a4474.png",
+    "static/media/geo.webp": "/static/media/geo.41d0abf16b449315d523.webp",
     "static/media/Space.gif": "/static/media/Space.2e881e6280bb2e33b4ba.gif",
-    "static/media/hidroterma.png": "/static/media/hidroterma.d77a88f60c1df506c00e.png",
-    "static/media/rocks.png": "/static/media/rocks.c3b02821597485443b12.png",
-    "static/media/last.png": "/static/media/last.2122f832d77e9696c4c2.png",
-    "static/media/background.png": "/static/media/background.785e540467d427919294.png",
-    "static/media/middle.png": "/static/media/middle.3c1ceaa6fafedc9a456b.png",
+    "static/media/image5.png": "/static/media/image5.86e43a7f1c399e0e6719.png",
+    "static/media/image2.png": "/static/media/image2.2122f832d77e9696c4c2.png",
+    "static/media/image3.png": "/static/media/image3.f364dfe2cd44d1b577cd.png",
     "static/media/chemoshymphony.png": "/static/media/chemoshymphony.e72e870760d8f9595556.png",
     "static/media/Europa_flipper.gif": "/static/media/Europa_flipper.5716c7649b52fe43e0f6.gif",
     "index.html": "/index.html",
-    "main.506444f6.css.map": "/static/css/main.506444f6.css.map",
-    "main.7c2790c5.js.map": "/static/js/main.7c2790c5.js.map",
-    "453.1e06e1e2.chunk.js.map": "/static/js/453.1e06e1e2.chunk.js.map"
+    "main.d28ccd4b.css.map": "/static/css/main.d28ccd4b.css.map",
+    "main.675f4906.js.map": "/static/js/main.675f4906.js.map",
+    "453.aba8c7b8.chunk.js.map": "/static/js/453.aba8c7b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.506444f6.css",
-    "static/js/main.7c2790c5.js"
+    "static/css/main.d28ccd4b.css",
+    "static/js/main.675f4906.js"
   ]
 }
