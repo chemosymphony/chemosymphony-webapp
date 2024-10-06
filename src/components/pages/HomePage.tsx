@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NextButton = styled(motion.button)`
-  margin-bootom: 20px;
+  margin-bottom: 2em;
   text-transform: uppercase;
   font-family: "Press Start 2P";
   padding: 30px 50px;
@@ -90,6 +90,7 @@ const Introduction: React.FC = () => {
                         </div>
 
                     </div>
+
                     <NextButton
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}

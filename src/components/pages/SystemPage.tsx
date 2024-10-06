@@ -241,7 +241,7 @@ const SystemPage: React.FC = () => {
                     <NextButton
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        onClick={() => window.location.href = '/transition:arriving'}
+                        onClick={() => window.location.href = '/planet'}
                     >
                         Next
                     </NextButton>

@@ -24,7 +24,6 @@ const App: React.FC = () => {
                 <Routes>
                     <Route path="/" element={<LoadingPage musicRef={musicRef} />} />
                     <Route path="/home" element={<HomePage />} />
-                    <Route path="/shuttle-travel" element={<ShuttleTravel />} />
                     <Route path="/news:past" element={<NewsPastPage />} />
                     <Route path="/news:future" element={<NewsFuturePage />} />
                     <Route path="/planet" element={<PlanetPage />} />
