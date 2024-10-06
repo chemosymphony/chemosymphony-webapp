@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.506444f6.css",
+    "main.js": "/static/js/main.7c2790c5.js",
+    "static/js/453.1e06e1e2.chunk.js": "/static/js/453.1e06e1e2.chunk.js",
+    "static/media/song.mp3": "/static/media/song.8fce8e17fe2fa9df5e0a.mp3",
+    "static/media/user.png": "/static/media/user.b27bac411ca721d2e99f.png",
+    "static/media/news_old.jpeg": "/static/media/news_old.b07dc5860f31c39f447e.jpeg",
+    "static/media/Space.gif": "/static/media/Space.2e881e6280bb2e33b4ba.gif",
+    "static/media/hidroterma.png": "/static/media/hidroterma.d77a88f60c1df506c00e.png",
+    "static/media/rocks.png": "/static/media/rocks.c3b02821597485443b12.png",
+    "static/media/last.png": "/static/media/last.2122f832d77e9696c4c2.png",
+    "static/media/background.png": "/static/media/background.785e540467d427919294.png",
+    "static/media/middle.png": "/static/media/middle.3c1ceaa6fafedc9a456b.png",
+    "static/media/chemoshymphony.png": "/static/media/chemoshymphony.e72e870760d8f9595556.png",
+    "static/media/Europa_flipper.gif": "/static/media/Europa_flipper.5716c7649b52fe43e0f6.gif",
+    "index.html": "/index.html",
+    "main.506444f6.css.map": "/static/css/main.506444f6.css.map",
+    "main.7c2790c5.js.map": "/static/js/main.7c2790c5.js.map",
+    "453.1e06e1e2.chunk.js.map": "/static/js/453.1e06e1e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.506444f6.css",
+    "static/js/main.7c2790c5.js"
+  ]
+}
