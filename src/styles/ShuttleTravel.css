@@ -1,32 +1,34 @@
 /* Container holding the background and spaceship */
 .space-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: url('../assets/images/Space.gif') repeat-x; /* Image repeats horizontally */
-    background-size: cover;
-    animation: moveBackground 90s linear infinite; /* Adjust speed with 10s */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url('../assets/images/Space.gif') repeat-x; /* Image repeats horizontally */
+  background-size: cover;
+  animation: moveBackground 90s linear infinite; /* Adjust speed with 10s */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Spaceship in the center of the screen */
+.spaceship {
+  height: 380px;
+  width: auto;
+}
+
+/* Animation for the background to move left */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
   }
-  
-  /* Spaceship in the center of the screen */
-  .spaceship {
-    height: 580px;
-    width: auto;
+  100% {
+    background-position: -10000px 0; /* Large value to make the movement seamless */
   }
-  
-  /* Animation for the background to move left */
-  @keyframes moveBackground {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: -10000px 0; /* Large value to make the movement seamless */
-    }
-  }
+}
 
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');

@@ -1,86 +1,82 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import background1 from '../../assets/images/rocks.png'; // Imagem mais frontal
-import background2 from '../../assets/images/hidroterma.png'; // Segunda camada
-import background3 from '../../assets/images/middle.png'; // Terceira camada
-import background4 from '../../assets/images/last.png'; // Quarta camada
-import background5 from '../../assets/images/background.png'; // Camada mais profunda
-import logo from '../../assets/images/chemoshymphony.png'; // Importe seu logo aqui
+import React, { useEffect } from 'react';
+import "../../styles/HomePage.css";
+import Card from '../atoms/Card';
 
-const HomePage: React.FC = () => {
+const Introduction: React.FC = () => {
+    useEffect(() => {
+        let ticking = false;
 
-    const handleNext = () => {
-    };
+        const handleScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollPosition = window.pageYOffset;
+
+                    const layer1 = document.querySelector('.layer5') as HTMLElement;
+                    const layer2 = document.querySelector('.layer4') as HTMLElement;
+                    const layer3 = document.querySelector('.layer3') as HTMLElement;
+                    const layer4 = document.querySelector('.layer2') as HTMLElement;
+                    const layer5 = document.querySelector('.layer1') as HTMLElement;
+
+                    // Adjust the speed of the layers relative to the scroll position
+                    if (layer1) layer1.style.transform = `translateY(${scrollPosition * 0.1}px)`; // Slowest
+                    if (layer2) layer2.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+                    if (layer3) layer3.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+                    if (layer4) layer4.style.transform = `translateY(${scrollPosition * 0.7}px)`;
+                    if (layer5) layer5.style.transform = `translateY(${scrollPosition * 0.9}px)`; // Fastest
+
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <Container
-            initial={{ opacity: 0 }} // Começa invisível
-            animate={{ opacity: 1 }} // Anima para visível
-            exit={{ opacity: 0 }} // Opcional: animação de saída ao navegar para fora
-            transition={{ duration: 5 }} // Duração da animação
-        >
-            {/* Logo centralizado na parte superior */}
-            <Logo src={logo} alt="Logo" />
+        <div className='background-parallax'>
+            {/* Parallax layers */}
+            <div className='parallax-layer layer1'></div>
+            <div className='parallax-layer layer2'></div>
+            <div className='parallax-layer layer3'></div>
+            <div className='parallax-layer layer4'></div>
+            <div className='parallax-layer layer5'></div>
 
-            <Layer style={{ backgroundImage: `url(${background5})` }} />
-            <Layer style={{ backgroundImage: `url(${background4})` }} />
-            <Layer style={{ backgroundImage: `url(${background3})` }} />
-            <Layer style={{ backgroundImage: `url(${background2})` }} />
-            <Layer style={{ backgroundImage: `url(${background1})` }} />
-
-            <NextButton
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={handleNext}
-            >
-                Next
-            </NextButton>
-        </Container>
+            {/* Your additional content goes here */}
+            <div className="content">
+                <div className='content-wrapper'>
+                    <Card
+                        title='A great adventure awaits!'
+                        text={
+                            <p className='special-text'>
+                                A spaceship sets off on an exciting mission to explore a distant exoplanet, searching for signs of alien life. The planet is covered in thick ice, but beneath it, a hidden ocean of liquid water awaits. Scientists on board believe strange life forms could be living down there, using chemical energy to survive, just like creatures found deep in Earth's oceans. With curiosity and hope, the crew prepares to drill through the ice and release robots into the mysterious water below. What secrets will they uncover in this icy, alien world? Could life really be out there, waiting to be found?
+                            </p>
+                        }
+                    />
+                    <p className='roadmap'>Our roadmap</p>
+                    <div className='row-wrapper'>
+                        
+                        <div className='element-1'>
+                            EXPLORE A NEW EXOPLANET!
+                        </div>
+                        <div className='element-2'>
+                            KNOW MORE ABOUT CHEMOSYNTHESYS
+                        </div>
+                        <div className='element-3'>
+                            PLAY A GAME WITH AN EVOLUTIONARY BASED GENETIC AI ALGORITHM
+                        </div>
+                    </div>
+                    <div className='buttom'>
+                        <p>aoshd ohas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 
-// Estilização dos componentes
-const Container = styled(motion.div)`
-    position: relative;
-    height: 100vh; /* Altura total da viewport */
-`;
-
-const Layer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover; /* Cobre todo o contêiner */
-  background-position: center; /* Centraliza a imagem */
-  background-attachment: fixed; /* Efeito parallax */
-`;
-
-const Logo = styled.img`
-  position: absolute; /* Posicionamento absoluto */
-  top: 20px; /* Distância do topo */
-  left: 50%; /* Alinha horizontalmente ao centro */
-  transform: translateX(-50%); /* Centraliza a imagem com relação ao seu próprio eixo */
-  width: 80%;
-  z-index: 10; /* Garante que o logo fique acima das camadas de fundo */
-`;
-
-const NextButton = styled(motion.button)`
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  text-transform: uppercase;
-  font-family: "Montserrat", serif;
-  padding: 30px 50px;
-  font-size: 32px;
-  background-color: #c23616;
-  color: white;
-  font-weight: bolder;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-export default HomePage;
+export default Introduction;

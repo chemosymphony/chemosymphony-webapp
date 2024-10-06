@@ -1,10 +1,20 @@
 import React from 'react';
 import "../../styles/Card.css"
 
-const Card: React.FC = () => {
+interface CardProps {
+    text: React.ReactNode;
+    title: string;
+  }
+
+const Card: React.FC<CardProps> = ({ text, title }) => {
     return (
-        <div className='card-container'>
-            <p>fjh kjdhskjhj</p>
+        <div className='card-wrapper'>
+            <div className='title-text'>
+                <h1>{title}</h1>
+            </div>
+            <div className='card-container'>
+                <p>{text}</p>
+            </div>
         </div>
     );
 };

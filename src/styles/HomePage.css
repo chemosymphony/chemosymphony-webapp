@@ -1,0 +1,126 @@
+/* Overall parallax container */
+.background-parallax {
+    position: relative;
+    height: 200vh; /* Enough height for a long scroll */
+    overflow: hidden;
+}
+
+/* Parallax layers configuration */
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transform: translateY(0); /* Initialize position */
+    transition: transform 0.1s ease-out; /* Optional: Adds a bit of smoothness */
+}
+
+/* Layer-specific backgrounds and z-index */
+.layer1 {
+    background-image: url('../assets/images/image1.png');
+    z-index: -5;
+}
+
+.layer2 {
+    background-image: url('../assets/images/image2.png');
+    z-index: -4;
+}
+
+.layer3 {
+    background-image: url('../assets/images/image3.png');
+    z-index: -3;
+}
+
+.layer4 {
+    background-image: url('../assets/images/image4.gif');
+    z-index: -2;
+}
+
+.layer5 {
+    background-image: url('../assets/images/image5.png');
+    z-index: -1;
+}
+
+/* Content that appears on top of the layers */
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #00132f;
+    background-color: #00132f;
+    height: 100vh;
+    margin-top: 100vh; /* Content starts after the parallax */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-text {
+    font-weight: 500;
+    
+}
+
+.bold-highlight {
+    font-family: "Press Start 2P", system-ui;
+    color: black; 
+    font-size: 18px;
+    color: black; 
+    line-height: 1.2; 
+    margin: 0;
+    font-weight: 200;
+    text-align: center;
+}
+
+.content-wrapper {
+    margin-top: 210px;
+}
+
+.row-wrapper {
+    margin: 50px;
+    margin-top: 25px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.element-1 {
+    width: 600px;
+    height: 400px;
+    background-color: grey;
+    margin: 100px;
+    margin-top: 0px;
+}
+.element-2 {
+    width: 600px;
+    height: 400px;
+    background-color: grey;
+    margin: 100px;
+    margin-top: 0px;
+    
+}
+.element-3 {
+    width: 600px;
+    height: 400px;
+    background-color: grey;
+    margin: 100px;
+    margin-top: 0px;
+
+}
+
+.roadmap {
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 0px
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
