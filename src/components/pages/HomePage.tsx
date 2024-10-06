@@ -9,6 +9,10 @@ import background5 from '../../assets/images/background.png'; // Camada mais pro
 import logo from '../../assets/images/chemoshymphony.png'; // Importe seu logo aqui
 
 const HomePage: React.FC = () => {
+
+    const handleNext = () => {
+    };
+
     return (
         <Container
             initial={{ opacity: 0 }} // Começa invisível
@@ -24,6 +28,14 @@ const HomePage: React.FC = () => {
             <Layer style={{ backgroundImage: `url(${background3})` }} />
             <Layer style={{ backgroundImage: `url(${background2})` }} />
             <Layer style={{ backgroundImage: `url(${background1})` }} />
+
+            <NextButton
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={handleNext}
+            >
+                Next
+            </NextButton>
         </Container>
     );
 };
@@ -52,6 +64,23 @@ const Logo = styled.img`
   transform: translateX(-50%); /* Centraliza a imagem com relação ao seu próprio eixo */
   width: 80%;
   z-index: 10; /* Garante que o logo fique acima das camadas de fundo */
+`;
+
+const NextButton = styled(motion.button)`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-transform: uppercase;
+  font-family: "Montserrat", serif;
+  padding: 30px 50px;
+  font-size: 32px;
+  background-color: #c23616;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export default HomePage;
