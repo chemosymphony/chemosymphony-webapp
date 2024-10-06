@@ -20,7 +20,7 @@ const Iframe = styled.iframe`
 const GamePage: React.FC = () => {
     return (
         <PageContainer>
-            <Iframe src="/index.html" title="Godot Game" />
+            <Iframe src="/game/index.html" title="Godot Game" />
         </PageContainer>
     );
 };
