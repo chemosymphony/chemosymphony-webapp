@@ -15,6 +15,8 @@ import hydrothermalImage from '../../assets/images/hydrothermal.jpg';
 import hydrothermalVentImage from '../../assets/images/hydrothermal-vent.jpg';
 import riftiaImage from '../../assets/images/riftia.jpg';
 import bacteriaImage from '../../assets/images/bacteria.jpg';
+import formulaH2s from '../../assets/images/formula_h2s.png';
+import formula6co2 from '../../assets/images/formula_6co2.png';
 import {useNavigate} from "react-router-dom";
 import ScrollIndicator from "../atoms/ScrollIndicator";
 import ScrollIndicatorV2 from "../atoms/ScrollIndicatorV2";
@@ -210,15 +212,40 @@ const TextCard = styled(motion.div)`
   right: 20px;
   background: white;
   font-family: "Montserrat", serif;
-  align-content: center;
   color: black;
-  padding: 20px;
+  height: calc(100% - 40px);
+  font-size: 24px;
+  padding: 2em;
   max-width: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
+  overflow-y: auto
 `;
 
 const StyledImage = styled(motion.img)`
+  display: flex;
+  max-width: 100%;
+  margin-top: 1em;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 10px;
+  animation: bounce 2s ;
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+`;
+
+const StyledImageEquation = styled(motion.img)`
   display: flex;
   width: 300px;
   margin-top: 1em;
@@ -264,7 +291,7 @@ const GameHeader = styled(motion.h2)`
 
 const GameText = styled(motion.span)`
   font-family: "Press Start 2P", "Montserrat", serif;
-  font-size: 11px;
+  font-size: 20px;
 `;
 
 const NextButton = styled(motion.button)`
@@ -335,6 +362,7 @@ const IcePage: React.FC = () => {
             {showScroll && (<ScrollIndicatorV2 onClick={handleScrollDown}/>)}
             <ProbeImage id="probe" src={probeImage} alt="Probe Image" />
             <Section>
+                <div style={{height: "100% !important"}}>
                 <GifContainer>
                     <IceGif src={iceGif} alt="Ice GIF" />
                     <TextCard
@@ -351,6 +379,7 @@ const IcePage: React.FC = () => {
                         <StyledCaption>Source: https://en.wikipedia.org/wiki/Photosynthesis#/media/File:Photosynthesis_en.svg</StyledCaption>
                     </TextCard>
                 </GifContainer>
+                </div>
             </Section>
             <Section>
                 <GifContainer>
@@ -516,14 +545,16 @@ const IcePage: React.FC = () => {
                         <br/>
                         <br/>
                         <GameText>Chemical Reaction:</GameText>
-
+                        <StyledImageEquation src={formulaH2s}></StyledImageEquation>
                         <GameText>Production of ATP:</GameText>
                         <br/>
                         <br/>
                         The energy released from this reaction is used to produce ATP (adenosine triphosphate), which is like a rechargeable battery that stores energy for cells.
                         Carbon Fixation: Using the energy stored in ATP, the bacteria convert carbon dioxide (CO₂) into organic molecules (like glucose) that serve as food.
+                        <br/>
+                        <br/>
                         <GameText>Chemical Reaction:</GameText>
-
+                        <StyledImageEquation src={formula6co2}></StyledImageEquation>
                         <GameText>Why This Matters:</GameText>
                         <br/>
                         <br/>
