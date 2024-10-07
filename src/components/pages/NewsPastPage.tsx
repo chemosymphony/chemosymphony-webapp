@@ -123,7 +123,7 @@ const NextButton = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const GameText = styled(motion.p)`
+const GameText = styled(motion.span)`
   font-family: "Press Start 2P", "Montserrat", serif;
 `;
 
@@ -178,27 +178,36 @@ const NewsPastPage: React.FC = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 2 }}
                             >
-                                NASA's Europa Clipper spacecraft has just launched on an exciting journey to explore Jupiter's moon, Europa. Scientists believe that beneath Europa's thick icy surface lies a vast ocean of liquid water, making it one of the most promising places to look for life beyond Earth.
+                                NASA's <GameText style={{ fontSize:"9px" }}>Europa Clipper</GameText> spacecraft has just launched on an exciting journey to explore Jupiter's moon, <GameText style={{ fontSize:"9px" }}>Europa</GameText>. Scientists believe that beneath Europa's thick icy surface lies a vast ocean of liquid water, making it one of the most promising places to look for life beyond Earth.
                                 <br/>
                                 <br/>
                                 <GameText style={{ fontSize: "12px" }}>What Will Europa Clipper Do?</GameText>
                                 <br/>
                                 <br/>
-                                The Europa Clipper will travel nearly 1.8 billion miles (2.9 billion kilometers) to reach Jupiter in April 2030. Instead of orbiting Europa directly, the spacecraft will orbit Jupiter and make almost 50 close flybys of Europa. During each flyby, it will spend only a short time near Europa to avoid Jupiter's intense radiation.
+                                The Europa Clipper will travel nearly <GameText style={{ fontSize:"9px" }}>1.8 billion miles (2.9 billion kilometers)</GameText> to reach Jupiter in <GameText style={{ fontSize:"9px" }}>April 2030.</GameText> Instead of orbiting Europa directly, the spacecraft will orbit Jupiter and make almost 50 close flybys of Europa. During each flyby, it will spend only a short time near Europa to avoid Jupiter's intense radiation.
                                 <br/>
                                 <br/>
                                 Equipped with nine scientific instruments, the Europa Clipper will:
                                 <br/>
                                 <br/>
-                                <GameText style={{ fontSize:"9px" }}>Scan Europa's Icy Surface:</GameText> Using special cameras and ice-penetrating radar to create detailed maps.
-                                <GameText style={{ fontSize:"9px" }}>Investigate the Subsurface Ocean:</GameText> Searching for signs of liquid water beneath the ice.
-                                <GameText style={{ fontSize:"9px" }}>Analyze the Atmosphere:</GameText> Studying the thin layer of gases surrounding Europa.
+                                <p>
+                                  <GameText style={{ fontSize:"9px" }}>Scan Europa's Icy Surface:</GameText> 
+                                  Using special cameras and ice-penetrating radar to create detailed maps.
+                                </p>
+                                <p>
+                                  <GameText style={{ fontSize:"9px" }}>Investigate the Subsurface Ocean:</GameText> 
+                                  Searching for signs of liquid water beneath the ice.
+                                </p>
+                                <p>
+                                  <GameText style={{ fontSize:"9px" }}>Analyze the Atmosphere:</GameText> 
+                                  Studying the thin layer of gases surrounding Europa.
+                                </p>
                                 <br/>
                                 <br/>
                                 <GameText style={{ fontSize:"12px" }}>Why Is This Mission Important?</GameText>
                                 <br/>
                                 <br/>
-                                This mission is a big step toward answering one of humanity's most profound questions: Could life exist elsewhere in our solar system? By studying Europa's potential to support life, we can better understand the possibilities of finding living organisms beyond Earth.
+                                This mission is a big step toward answering one of humanity's most profound questions: <GameText style={{ fontSize:"9px" }}>Could life exist elsewhere in our solar system?</GameText> By studying Europa's potential to support life, we can better understand the possibilities of finding living organisms beyond Earth.
 
                             </Text>
                             <Image

@@ -171,7 +171,7 @@ const textContents = [
         title: "Going on a Mission",
         text: (
             <p>
-                Our satellite is on its way towards the TRIPPIST-1 g exoplanet. We are on the lookout for signs of life.
+                Our satellite is on its way towards the TRAPPIST-1g exoplanet. We are on the lookout for signs of life.
             </p>
         ),
     },
@@ -179,7 +179,7 @@ const textContents = [
         title: "Expanding the Habitable Zone",
         text: (
             <p>
-                Traditionally, the "habitable zone" refers to the region around a star where conditions are just right for liquid water to exist on a planet's surface. However, planets with subsurface oceans beneath thick ice layers expand this concept. Even if a planet is far from its star—making the surface too cold for liquid water—internal heating mechanisms can keep an underground ocean in a liquid state. This means life-supporting conditions might exist in places we previously thought were inhospitable.
+                Traditionally, the "habitable zone" refers to the region around a star where conditions are just right for liquid water to exist on a planet's surface. Exoplanets like TRAPPIST-1g, having an ocean underground, expand this concept. Though its surface is freezing cold, internal heating mechanisms can keep an underground ocean in a liquid state. This means life-supporting conditions might exist in places we previously thought were inhospitable.
             </p>
         ),
     },
@@ -188,14 +188,6 @@ const textContents = [
         text: (
             <p>
                 For a subsurface ocean to remain liquid beneath kilometers of ice, the planet needs internal energy sources. Geothermal heat from radioactive decay or tidal heating caused by gravitational interactions with a star or nearby moons can provide the necessary warmth. These energy sources might also drive hydrothermal vents on the ocean floor, creating rich chemical environments where life could originate and flourish, similar to ecosystems found near Earth's deep-sea vents.
-            </p>
-        ),
-    },
-    {
-        title: "The Hidden Oceans Beneath Ice",
-        text: (
-            <p>
-                Beneath the solid ice crust of these distant worlds, liquid water thrives due to internal heating. These hidden oceans allow essential chemical reactions to occur, enabling molecules to interact and potentially form the building blocks of life, such as proteins and nucleic acids. Even without a temperate surface, life as we know it might thrive in these concealed aquatic environments.
             </p>
         ),
     },
@@ -211,7 +203,7 @@ const textContents = [
         title: "Life Without Atmospheres",
         text: (
             <p>
-                While atmospheres are crucial for surface life, subsurface oceans beneath ice layers may not require them. The thick ice serves as a shield against harmful radiation and space debris, reducing the necessity for an atmospheric layer. Although an atmosphere can offer additional benefits, life in these hidden oceans relies more on the protection and insulation provided by the ice. This opens the possibility for unique forms of life to exist without atmospheric support, challenging our preconceived notions of habitable environments.
+                While atmospheres are crucial for surface life, subsurface oceans beneath ice layers may not require them. The thick ice serves as a shield against harmful radiation and space debris, reducing the necessity for an atmospheric layer. Although an atmosphere can offer additional benefits, life in these hidden oceans relies more on the protection and insulation provided by the ice.
             </p>
         ),
     },

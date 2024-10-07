@@ -140,7 +140,7 @@ const PreviousChapter = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const GameText = styled(motion.p)`
+const GameText = styled(motion.span)`
   font-family: "Press Start 2P", "Montserrat", serif;
 `;
 
@@ -195,13 +195,13 @@ const NewsFuturePage: React.FC = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1, delay: 2 }}
                             >
-                                After a breathtaking journey spanning 300 years, the Trappist Clipper has finally reached the mysterious world of TRAPPIST-1g, an exoplanet located 40.7 light-years away from Earth.
+                                After a breathtaking journey spanning 300 years, the Trappist Clipper is moments away from reaching the mysterious world of TRAPPIST-1g, an exoplanet located 40.7 light-years away from Earth.
                                 <br/>
                                 <br/>
                                 Launched in the early 2100s, the Clipper raced through interstellar space, journeying farther than any spacecraft before. Halfway through its journey, the spacecraft began to slow down, carefully adjusting its course toward its ultimate goal.
                                 <br/>
                                 <br/>
-                                Awaiting the Clipper was TRAPPIST-1g, a planet covered in ice several kilometers deep. Beneath this frozen surface lies a vast ocean, a hidden world where life might exist in the darkness. Similar to the unique ecosystems found near Earth's deep-sea hydrothermal vents, these alien waters might harbor organisms that could change our understanding of life.
+                                Awaiting the Clipper was TRAPPIST-1g, a planet covered in an icy shell several kilometers deep. Beneath this frozen surface lies a vast ocean, a hidden world where life might exist in the darkness. Similar to the unique ecosystems found near Earth's deep-sea hydrothermal vents, these alien waters might harbor organisms that could change our understanding of life.
                                 <br/>
                                 <br/>
                                 Equipped with advanced sensors and autonomous probes, the Trappist Clipper is ready to break through the icy shell. Its mission: to explore the ice layers, dive into the deep ocean, and search for signs of life—whether microscopic or more complex. Every discovery will bridge the vast distance back to Earth.
