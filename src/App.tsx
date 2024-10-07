@@ -15,7 +15,7 @@ import GamePage from "./components/pages/GamePage";
 import ShuttleTravel from './components/pages/ShuttleTravel';
 import IcePage from "./components/pages/IcePage";
 import CryobotPage from "./components/pages/CryobotPage";
-import Credits from './components/pages/Credits';
+import CreditsPage from './components/pages/CreditsPage';
 const App: React.FC = () => {
     const musicRef = useRef<{ play: () => void }>(null);
     return (
@@ -34,7 +34,7 @@ const App: React.FC = () => {
                     <Route path="/cryobot" element={<CryobotPage/>} />
                     <Route path="/ice" element={<IcePage/>} />
                     <Route path="/transition:arriving" element={<GoingToPlanetPage/>} />
-                    <Route path="/credits" element={<Credits/>} />
+                    <Route path="/credits" element={<CreditsPage/>} />
                     <Route path="/game" element={<GamePage/>} />
                 </Routes>
             </AnimatePresence>

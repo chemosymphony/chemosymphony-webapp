@@ -109,7 +109,7 @@ const NextButton = styled(motion.button)`
   text-transform: uppercase;
   font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
-  font-size: 32px;
+  font-size: 24px;
   background-color: white;
   color: #0e0e0e;
   font-weight: bolder;
@@ -225,7 +225,24 @@ const textContents = [
     },
 ];
 
-const PlanetPage: React.FC = () => {
+const PreviousChapter = styled(motion.button)`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", "Montserrat", serif;
+  padding: 30px 50px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const TravelPage: React.FC = () => {
     const navigate = useNavigate()
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [ended, setEnded] = useState(false);
@@ -291,11 +308,18 @@ const PlanetPage: React.FC = () => {
                 <NextButton whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => navigate('/system')}>
-                    Next chapter
+                    {currentTextIndex + 1 === textContents.length ? "Next":"Skip"}
                 </NextButton>
+                <PreviousChapter
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => navigate("/news:future")}
+                >
+                    Previous
+                </PreviousChapter>
             </PageContainer>
         </AnimatePresence>
     );
 };
 
-export default PlanetPage;
+export default TravelPage;

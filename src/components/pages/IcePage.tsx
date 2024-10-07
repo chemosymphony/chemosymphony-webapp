@@ -278,7 +278,7 @@ const StyledCaption = styled.p`
 
 const ProbeImage = styled.img`
   position: fixed;
-  top: 10%;
+  top: 15%;
   left: 10%;
   width: 150px;
   z-index: 100;
@@ -301,7 +301,7 @@ const NextButton = styled(motion.button)`
   text-transform: uppercase;
   font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
-  font-size: 32px;
+  font-size: 24px;
   background-color: white;
   color: #0e0e0e;
   font-weight: bolder;
@@ -310,6 +310,23 @@ const NextButton = styled(motion.button)`
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px; // Espaçamento acima do botão
+`;
+
+const PreviousChapter = styled(motion.button)`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", "Montserrat", serif;
+  padding: 30px 50px;
+  font-size: 24px;
+  background-color: #0e0e0e;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const cardVariants = {
@@ -619,7 +636,13 @@ const IcePage: React.FC = () => {
                     Start game
                 </NextButton>
             </SectionEnd>
-
+            <PreviousChapter
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => navigate("/cryobot")}
+            >
+                Previous
+            </PreviousChapter>
         </PageContainer>
         </AnimatePresence>
     );

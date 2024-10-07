@@ -119,9 +119,26 @@ const NextButton = styled(motion.button)`
   text-transform: uppercase;
   font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
-  font-size: 32px;
+  font-size: 24px;
   background-color: white;
   color: #0e0e0e;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const PreviousChapter = styled(motion.button)`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", "Montserrat", serif;
+  padding: 30px 50px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
   font-weight: bolder;
   border: none;
   border-radius: 5px;
@@ -252,13 +269,18 @@ const PlanetPage: React.FC = () => {
                         <Iframe src="https://eyes.nasa.gov/apps/exo/#/planet/TRAPPIST-1_g" />
                     </Card>
                 </ContentContainer>
-                <NextButton
+                <NextButton whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => navigate('/transition:arriving')}>
+                    {currentTextIndex + 1 === textContents.length ? "Next":"Skip"}
+                </NextButton>
+                <PreviousChapter
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick={() => navigate('/transition:arriving')}
+                    onClick={() => navigate("/system")}
                 >
-                    Next chapter
-                </NextButton>
+                    Previous
+                </PreviousChapter>
             </PageContainer>
         </AnimatePresence>
     );

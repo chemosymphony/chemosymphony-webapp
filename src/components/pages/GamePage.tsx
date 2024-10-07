@@ -48,6 +48,21 @@ const NextButton = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
+const PreviousChapter = styled(motion.button)`
+  text-transform: uppercase;
+  font-family: "Press Start 2P";
+  margin-top: 1em;
+  padding: 20px 40px;
+  font-size: 16px;
+  background-color: white;
+  color: #0e0e0e;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
 const ModalContent = styled(motion.div)`
   background: white;
   color: black;
@@ -91,19 +106,33 @@ const modalVariants = {
 
 const GamePage: React.FC = () => {
     const navigate = useNavigate();
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalCreditsIsOpen, setModalCreditsIsOpen] = useState(false);
+    const [modalPlanetIsOpen, setModalPlanetIsOpen] = useState(false);
 
-    const openModal = () => {
-        setModalIsOpen(true);
+    const openCreditsModal = () => {
+        setModalCreditsIsOpen(true);
     };
 
-    const closeModal = () => {
-        setModalIsOpen(false);
+    const closeCreditsModal = () => {
+        setModalCreditsIsOpen(false);
     };
 
-    const handleConfirm = () => {
-        closeModal();
+    const openPlanetModal = () => {
+        setModalPlanetIsOpen(true);
+    };
+
+    const closePlanetModal = () => {
+        setModalPlanetIsOpen(false);
+    };
+
+    const handleCreditsConfirm = () => {
+        closeCreditsModal();
         navigate('/credits');
+    };
+
+    const handlePlanetConfirm = () => {
+        closePlanetModal();
+        navigate('/ice');
     };
 
     return (
@@ -118,13 +147,20 @@ const GamePage: React.FC = () => {
             <NextButton
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={openModal}
+                onClick={openCreditsModal}
             >
                 Go to Credits
             </NextButton>
+            <PreviousChapter
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={openPlanetModal}
+            >
+                Go back to TRAPPIST-1 G
+            </PreviousChapter>
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
+                isOpen={modalCreditsIsOpen}
+                onRequestClose={closeCreditsModal}
                 contentLabel="Confirmation Modal"
                 style={{
                     content: {
@@ -149,13 +185,49 @@ const GamePage: React.FC = () => {
                 <ModalContent
                     variants={modalVariants}
                     initial="hidden"
-                    animate={modalIsOpen ? "visible" : "hidden"}
+                    animate={modalCreditsIsOpen ? "visible" : "hidden"}
                     exit="exit"
                 >
                     <h2><GameText>Confirm Navigation</GameText></h2>
                     <p>Are you sure you want to go to the credits?</p>
-                    <ModalButton onClick={handleConfirm}>Yes</ModalButton>
-                    <ModalButton onClick={closeModal}>No</ModalButton>
+                    <ModalButton onClick={handleCreditsConfirm}>Yes</ModalButton>
+                    <ModalButton onClick={closeCreditsModal}>No</ModalButton>
+                </ModalContent>
+            </Modal>
+            <Modal
+                isOpen={modalPlanetIsOpen}
+                onRequestClose={closePlanetModal}
+                contentLabel="Confirmation Modal"
+                style={{
+                    content: {
+                        top: '50%',
+                        left: '50%',
+                        right: 'auto',
+                        bottom: 'auto',
+                        marginRight: '-50%',
+                        transform: 'translate(-50%, -50%)',
+                        background: 'rgba(0, 0, 0, 0.8)',
+                        border: 'none',
+                        borderRadius: '10px',
+                        padding: '20px',
+                        color: 'white',
+                        textAlign: 'center',
+                    },
+                    overlay: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                    },
+                }}
+            >
+                <ModalContent
+                    variants={modalVariants}
+                    initial="hidden"
+                    animate={modalPlanetIsOpen ? "visible" : "hidden"}
+                    exit="exit"
+                >
+                    <h2><GameText>Confirm Navigation</GameText></h2>
+                    <p>Are you sure you want to go to back to TRAPPIST-1 G?</p>
+                    <ModalButton onClick={handlePlanetConfirm}>Yes</ModalButton>
+                    <ModalButton onClick={closePlanetModal}>No</ModalButton>
                 </ModalContent>
             </Modal>
         </PageContainer>

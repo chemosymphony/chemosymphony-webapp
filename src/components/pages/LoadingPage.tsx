@@ -5,7 +5,7 @@ import PlayButton from '../atoms/PlayButton';
 import Background from '../atoms/Background';
 import LogoImage from '../atoms/Logo';
 import styled from 'styled-components';
-import logo from '../../assets/images/chemoshymphony.png';
+import logo from '../../assets/images/chemosymphony.png';
 
 const Container = styled.div`
   display: flex;

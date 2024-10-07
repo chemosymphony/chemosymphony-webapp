@@ -108,7 +108,7 @@ const NextButton = styled(motion.button)`
   text-transform: uppercase;
   font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
-  font-size: 32px;
+  font-size: 24px;
   background-color: white;
   color: #0e0e0e;
   font-weight: bolder;
@@ -118,11 +118,21 @@ const NextButton = styled(motion.button)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const Highlight = styled(motion.span)`
+const PreviousChapter = styled(motion.button)`
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
   font-family: "Press Start 2P", "Montserrat", serif;
-  font-weight: 200;
-  font-size: 11px;
-  text-align: center;
+  padding: 30px 50px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const pageVariants = {
@@ -226,11 +236,20 @@ const PlanetPage: React.FC = () => {
                         {textContents[currentTextIndex].text}
                     </TextCard>
                 </ContentContainer>
-                <NextButton whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={() => navigate('/ice')}>
-                    Next chapter
+                <NextButton
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => navigate('/ice')}
+                >
+                    Next
                 </NextButton>
+                <PreviousChapter
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => navigate("/planet")}
+                >
+                    Previous
+                </PreviousChapter>
             </PageContainer>
         </AnimatePresence>
     );

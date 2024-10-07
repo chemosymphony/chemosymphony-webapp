@@ -22,6 +22,26 @@ const NextButton = styled(motion.button)`
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
+
+const SkipToTheGame = styled(motion.button)`
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 2em;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", "Montserrat", serif;
+  padding: 20px 30px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #0e0e0e;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
 const Introduction: React.FC = () => {
     const navigate = useNavigate()
 
@@ -55,6 +75,10 @@ const Introduction: React.FC = () => {
 
     const start = () => {
         navigate("/news:past")
+    }
+
+    const startGame = () => {
+        navigate("/game")
     }
 
     const handleScrollDown = () => {
@@ -142,6 +166,17 @@ const Introduction: React.FC = () => {
                 >
                     START ADVENTURE
                 </NextButton>
+
+                <SkipToTheGame
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={startGame}
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, delay: 3.5 }}
+                >
+                    Skip to the game
+                </SkipToTheGame>
             </motion.div>
         </div>
 </div>
