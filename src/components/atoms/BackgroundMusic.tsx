@@ -28,7 +28,7 @@ const PlayButton = styled.button`
 const BackgroundMusic = forwardRef((_, ref) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(localStorage.getItem('isPlaying') === 'true');
-    const [isMuted, setIsMuted] = useState(!localStorage.getItem('isPlaying'));
+    const [isMuted, setIsMuted] = useState(localStorage.getItem('isMuted') === 'true');
     const [hasError, setHasError] = useState(false)
 
     useImperativeHandle(ref, () => ({
@@ -56,25 +56,18 @@ const BackgroundMusic = forwardRef((_, ref) => {
         playAudio();
     }, []);
 
-    const handlePlayPause = () => {
+    useEffect(() => {
         if (audioRef.current) {
-            if (isPlaying) {
-                audioRef.current.pause();
-                setIsPlaying(false);
-                localStorage.setItem('isPlaying', 'false');
-            } else {
-                audioRef.current.play();
-                setIsPlaying(true);
-                localStorage.setItem('isPlaying', 'true');
-            }
+            audioRef.current.muted = isMuted; // Aplica o estado de mutação ao áudio
         }
-    };
+    }, [isMuted]);
 
     const toggleMute = () => {
-        if (audioRef.current) {
-            audioRef.current.muted = !isMuted;
-            setIsMuted(!isMuted);
-        }
+        setIsMuted(prevMuted => {
+            const newMutedState = !prevMuted; // Inverte o estado de mutação
+            localStorage.setItem('isMuted', newMutedState.toString()); // Armazena o novo estado
+            return newMutedState; // Retorna o novo estado
+        });
     };
 
     return (
@@ -83,11 +76,12 @@ const BackgroundMusic = forwardRef((_, ref) => {
                 <source src={backgroundMusic} type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
-            {!hasError && <PlayButton onClick={toggleMute}>
-                <img src={isMuted && isPlaying ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
-                {isMuted && isPlaying? 'Unmute' : 'Mute'}
-            </PlayButton>
-            }
+            {!hasError && (
+                <PlayButton onClick={toggleMute}>
+                    <img src={isMuted && isPlaying ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
+                    {isMuted && isPlaying ? 'Unmute' : 'Mute'}
+                </PlayButton>
+            )}
         </>
     );
 });
