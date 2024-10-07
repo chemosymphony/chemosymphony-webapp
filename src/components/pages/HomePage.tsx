@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 import ScrollIndicator from '../atoms/ScrollIndicator';
 import {useNavigate} from "react-router-dom";
 const NextButton = styled(motion.button)`
-  margin-bottom: 2em;
   text-transform: uppercase;
+  margin-bottom: 1em;
   font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
   font-size: 32px;
@@ -21,6 +21,7 @@ const NextButton = styled(motion.button)`
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 `;
 
 const SkipToTheGame = styled(motion.button)`
@@ -134,7 +135,7 @@ const Introduction: React.FC = () => {
                         transition={{ duration: 1, delay: 2 }}
                     >
                         <img src={exoplanet} alt="Exoplanet Image" className="element-image" />
-                        <p className='text-elements'>Go on a space mission based on the real exoplanet TRAPPIST-1 g!
+                        <p className='text-elements'>Go on a space mission based on the real exoplanet TRAPPIST-1g!
                         </p>
                     </motion.div>
                     <motion.div
