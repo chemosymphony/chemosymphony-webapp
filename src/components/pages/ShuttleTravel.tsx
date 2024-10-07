@@ -168,6 +168,14 @@ const cardVariants = {
 
 const textContents = [
     {
+        title: "Going on a Mission",
+        text: (
+            <p>
+                Our satellite is on its way towards the TRIPPIST-1 g exoplanet. We are on the lookout for signs of life.
+            </p>
+        ),
+    },
+    {
         title: "Expanding the Habitable Zone",
         text: (
             <p>
