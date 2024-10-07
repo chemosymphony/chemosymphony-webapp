@@ -46,6 +46,7 @@ const BackgroundMusic = forwardRef((_, ref) => {
                 if (audioRef.current && localStorage.getItem('isPlaying') === 'true') {
                     await audioRef.current.play();
                     setIsPlaying(true);
+                    setHasError(false)
                 }
             } catch (err) {
                 console.log('Autoplay failed, user interaction required.');
