@@ -247,9 +247,8 @@ const StyledImage = styled(motion.img)`
 
 const StyledImageEquation = styled(motion.img)`
   display: flex;
-  width: 300px;
+  height: 60px;
   margin-top: 1em;
-  height: auto;
   position: relative;
   transform: translateX(-50%);
   left: 50%;
@@ -597,7 +596,11 @@ const IcePage: React.FC = () => {
                         <br/>
                         <br/>
                         <GameText>Predators:</GameText> Creatures like crabs, fish, and other deep-sea animals feed on tube worms.
+                        <br/>
+                        <br/>
                         <GameText>Ecosystem Support:</GameText> Their existence supports a diverse community of organisms that rely on them for food.
+                        <br/>
+                        <br/>
                         <GameText>Energy Flow:</GameText> The energy produced through chemosynthesis in tube worms and bacteria flows up the food chain, sustaining life in the deep ocean.
                         <br/>
                         <br/>
