@@ -21,33 +21,31 @@ const PageContainer = styled.div`
 
 const Satellite = styled(motion.img)`
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100px;
+  bottom: 200px; /* Ajusta a posição vertical */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
   height: auto;
-  transform: translateY(-50%);
+  z-index: 2000;
+  animation: orbit 2s linear infinite; /* Adiciona animação de órbita */
 `;
 
 const Planet = styled(motion.img)`
   position: absolute;
   top: 50%;
-  right: 100px;
-  width: 150px;
+  left: 50%;
+  width: 250px; /* Tamanho inicial do planeta */
   height: auto;
-  transform: translateY(-50%);
-  z-index: 1;
+  transform: translate(-50%, -50%); /* Centraliza o planeta */
 `;
 
 const Blackout = styled(motion.div)`
   position: absolute;
-  top: 50%;
-  right: 20px;
   width: 100vw;
   height: 100vh;
   background-color: black;
-  clip-path: circle(0% at 85% 50%);
-  z-index: 10;
-  transform: translateY(-50%);
+  clip-path: circle(0% at 50% 50%);
+  z-index: 3000;
 `;
 
 const TransitionPage: React.FC = () => {
@@ -57,20 +55,18 @@ const TransitionPage: React.FC = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowBlackout(true);
-        }, 5000); // 5 seconds for the satellite to reach the planet
+        }, 5000); // Tempo para o satélite
 
-        // Limpa o timer
         return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {
         if (showBlackout) {
-            // Redireciona após o Blackout (2 segundos depois da animação)
             const redirectTimer = setTimeout(() => {
                 navigate('/cryobot'); // Altere para a página desejada
             }, 2000); // Sincronizado com a duração do Blackout
 
-            return () => clearTimeout(redirectTimer); // Limpa o timer
+            return () => clearTimeout(redirectTimer);
         }
     }, [showBlackout, navigate]);
 
@@ -79,22 +75,22 @@ const TransitionPage: React.FC = () => {
             <Satellite
                 src={satelliteGif}
                 alt="Satélite"
-                initial={{ x: '0' }}
-                animate={{ x: 'calc(100vw - 170px)' }}
-                transition={{ duration: 5, ease: 'linear' }}
+                initial={{ x: '-10%' }}
+                animate={{ x: ['-10%', '10%', '-10%'], scale: [1, 0.5] } } // Animação de movimento
+                transition={{ duration: 7, ease: 'linear', repeat: Infinity }}
             />
             <Planet
                 src={planetImage}
                 alt="Planeta"
-                initial={{ scale: 1 }}
-                animate={{ scale: 1.5 }} // Aumenta o planeta durante a animação
-                transition={{ duration: 5, ease: 'linear' }} // Sincroniza com o satélite
+                initial={{ scale: 1 }} // Tamanho inicial do planeta
+                animate={{ scale: [1, 5] }} // Cresce e depois retorna
+                transition={{ duration: 5, ease: 'easeInOut' }} // Animação do crescimento
             />
             <AnimatePresence>
                 {showBlackout && (
                     <Blackout
-                        initial={{ clipPath: 'circle(0% at 85% 50%)' }}
-                        animate={{ clipPath: 'circle(150% at 85% 50%)' }}
+                        initial={{ clipPath: 'circle(0% at 50% 50%)' }}
+                        animate={{ clipPath: 'circle(150% at 50% 50%)' }}
                         transition={{ duration: 2, ease: 'easeInOut' }}
                     />
                 )}
