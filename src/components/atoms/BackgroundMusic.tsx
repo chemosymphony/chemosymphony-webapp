@@ -28,7 +28,7 @@ const PlayButton = styled.button`
 const BackgroundMusic = forwardRef((_, ref) => {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(localStorage.getItem('isPlaying') === 'true');
-    const [isMuted, setIsMuted] = useState(localStorage.getItem('isPlaying') === 'true');
+    const [isMuted, setIsMuted] = useState(!localStorage.getItem('isPlaying'));
     const [hasError, setHasError] = useState(false)
 
     useImperativeHandle(ref, () => ({
@@ -84,8 +84,8 @@ const BackgroundMusic = forwardRef((_, ref) => {
                 Your browser does not support the audio element.
             </audio>
             {!hasError && <PlayButton onClick={toggleMute}>
-                <img src={isMuted ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
-                {isMuted ? 'Unmute' : 'Mute'}
+                <img src={isMuted && isPlaying ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
+                {isMuted && isPlaying? 'Unmute' : 'Mute'}
             </PlayButton>
             }
         </>

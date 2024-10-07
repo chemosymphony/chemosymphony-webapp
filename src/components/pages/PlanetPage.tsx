@@ -201,24 +201,15 @@ const textContents = [
 const PlanetPage: React.FC = () => {
     const navigate = useNavigate()
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
-    const [ended, setEnded] = useState(false);
 
     const handleNext = () => {
         const nextIndex = currentTextIndex + 1;
         setCurrentTextIndex(nextIndex);
-
-        if (nextIndex === textContents.length - 1) {
-            setEnded(true);
-        }
     };
 
     const handlePrev = () => {
         const prevIndex = currentTextIndex - 1;
         setCurrentTextIndex(prevIndex);
-
-        if (ended && prevIndex < textContents.length - 1) {
-            setEnded(false);
-        }
     };
 
     return (
@@ -261,15 +252,13 @@ const PlanetPage: React.FC = () => {
                         <Iframe src="https://eyes.nasa.gov/apps/exo/#/planet/TRAPPIST-1_g" />
                     </Card>
                 </ContentContainer>
-                {ended && (
-                    <NextButton
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => navigate('/transition:arriving')}
-                    >
-                        Next
-                    </NextButton>
-                )}
+                <NextButton
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={() => navigate('/transition:arriving')}
+                >
+                    Next chapter
+                </NextButton>
             </PageContainer>
         </AnimatePresence>
     );

@@ -111,7 +111,7 @@ const NextButton = styled(motion.button)`
   bottom: 20px;
   right: 20px;
   text-transform: uppercase;
-  font-family: "Montserrat", serif;
+  font-family: "Press Start 2P", "Montserrat", serif;
   padding: 30px 50px;
   font-size: 32px;
   background-color: #0e0e0e;

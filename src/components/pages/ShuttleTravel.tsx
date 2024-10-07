@@ -283,7 +283,7 @@ const PlanetPage: React.FC = () => {
                 <NextButton whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={() => navigate('/system')}>
-                    Next
+                    Next chapter
                 </NextButton>
             </PageContainer>
         </AnimatePresence>
