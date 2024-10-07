@@ -81,8 +81,8 @@ const BackgroundMusic = forwardRef((_, ref) => {
             </audio>
             {!hasError && (
                 <PlayButton onClick={toggleMute}>
-                    <img src={isMuted && isPlaying ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
-                    {isMuted && isPlaying ? 'Unmute' : 'Mute'}
+                    <img src={isMuted ? muteIcon : unmuteIcon} alt={isMuted ? 'Unmute' : 'Mute'} style={{ width: '20px', height: '20px' }} />
+                    {isMuted ? 'Unmute' : 'Mute'}
                 </PlayButton>
             )}
         </>
