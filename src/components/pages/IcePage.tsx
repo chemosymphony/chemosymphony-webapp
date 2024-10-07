@@ -219,11 +219,12 @@ const TextCard = styled(motion.div)`
   max-width: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: justify;
+  overflow-y: auto
 `;
 
 const StyledImage = styled(motion.img)`
   display: flex;
-  width: 200px;
+  max-width: 100%;
   margin-top: 1em;
   position: relative;
   transform: translateX(-50%);
