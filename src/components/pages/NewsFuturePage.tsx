@@ -7,6 +7,9 @@ import logo from '../../assets/images/chemonews.png';
 import newsImage from '../../assets/images/planeta.png';
 // @ts-ignore
 import userImage from '../../assets/images/user.png';
+import pietroImage from '../../assets/images/pietro.png';
+import dudaImage from '../../assets/images/duda.png';
+import lucasImage from '../../assets/images/lucas.png';
 const PageContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -235,7 +238,7 @@ const NewsFuturePage: React.FC = () => {
                             <br/>
                             <br/>
                             <Comment>
-                                <UserImage src={userImage} alt="User" />
+                                <UserImage src={pietroImage} alt="User" />
                                 <CommentText>
                                 Despite traveling at such high speeds, the journey to TRAPPIST-1g took 300 years due to the immense distance of 40.7 light-years. For the first half of the journey, the spacecraft maintained its top speed. The second half involved gradual deceleration to ensure a safe arrival at the destination.
                                 </CommentText>
@@ -244,7 +247,7 @@ const NewsFuturePage: React.FC = () => {
                             <br/>
                             <br/>
                             <Comment>
-                                <UserImage src={userImage} alt="User" />
+                                <UserImage src={dudaImage} alt="User" />
                                 <CommentText>
                                 To decelerate without conventional fuel, the Clipper deployed a Magnetic Sail or MagSail. This consisted of a large superconducting loop generating a magnetic field. As the spacecraft moved through the interstellar medium, the magnetic field interacted with charged particles, creating a drag force that gradually slowed the spacecraft over the remaining distance.
                                 </CommentText>
@@ -253,7 +256,7 @@ const NewsFuturePage: React.FC = () => {
                             <br/>
                             <br/>
                             <Comment>
-                                <UserImage src={userImage} alt="User" />
+                                <UserImage src={lucasImage} alt="User" />
                                 <CommentText>
                                 The Clipper uses quantum entanglement for instant communication across vast distances. Pairs of entangled particles were prepared before the mission; one particle remained on Earth while its entangled partner traveled with the spacecraft. Changes observed in one particle are reflected in its entangled partner, allowing for instantaneous data transmission back to Earth.
                                 </CommentText>

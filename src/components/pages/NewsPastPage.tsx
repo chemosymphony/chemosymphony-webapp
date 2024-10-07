@@ -6,7 +6,8 @@ import logo from '../../assets/images/chemonews.png';
 // @ts-ignore
 import newsImage from '../../assets/images/news_old.jpeg';
 // @ts-ignore
-import userImage from '../../assets/images/user.png';
+import gabrielImage from '../../assets/images/freitas.png';
+import gustavoImage from '../../assets/images/gustavo.png';
 
 const PageContainer = styled(motion.div)`
   display: flex;
@@ -218,14 +219,14 @@ const NewsPastPage: React.FC = () => {
                               <GameText style={{ fontSize:"15px" }}>Comments</GameText>
                             </Headline>
                             <Comment>
-                                <UserImage src={userImage} alt="User" />
+                                <UserImage src={gabrielImage} alt="User" />
                                 <CommentText>
                                     Great article! Very informative.
                                 </CommentText>
                                 <Star>★</Star>
                             </Comment>
                             <Comment>
-                                <UserImage src={userImage} alt="User" />
+                                <UserImage src={gustavoImage} alt="User" />
                                 <CommentText>
                                     Can't wait to see what they discover!
                                 </CommentText>
